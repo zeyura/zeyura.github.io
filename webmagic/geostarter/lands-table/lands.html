@@ -1,0 +1,426 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Таблица стран мира</title>
+<meta name='description' content='Демонстрационная страница, таблица стран мира'>
+<meta name='keywords' content='пример возможности css3 java-script'>
+<meta name="robots" content="index">
+<link href='../favicon.ico' rel="shortcut icon" >
+<link href="../reset.css" rel="stylesheet">
+<link href="lands.css" rel="stylesheet">
+<script src="../scripts/lands.js" type="text/javascript" ></script>
+<script src="../scripts/lodash.js" type="text/javascript" ></script>
+<script src="../../scripts/jquery.1.8.js" ></script>
+</head>
+
+<body>
+<script type="text/template" id="filter-template">
+<div class="filter" id='filter'>
+  <span class="filter-title"><%=title%></span>
+  <ul class="filter-items">
+    <% $(items).each(function() { %>
+      <li name="<%=this.lin%>"><%=this.html%></li>
+    <% }); %> 
+  </ul>
+</div>
+</script>
+<div id='tcont'>
+
+<label for="filter-row">&nbsp;Фильтр&nbsp; </label>
+<input type="text" name="filter-row" id="filter-row"><div id='filter-krest'></div>
+<div id='info'><div class='znak'></div>
+<p><span class='left-cut'></span><span class='close'></span>
+Допускается ввод нескольких слов или фрагментов слов через пробел. Поиск ведется по всем полям таблицы. Поставьте знак <b>!</b> перед фрагментом для поиска в начале слов
+или знак <b>/</b> после фрагмента для поиска в окончаниях слов. Чтобы очистить поле используйте клавишу Esc.
+</p></div>
+
+  <table id="lnd" >
+    <thead>
+      <tr id='thr'>
+        <th data-type="string" class="" id='lnd-name'>Страна
+          <div></div></th>
+        <th data-type="string" id='lnd-where'>Где
+          <div></div></th>
+        <th data-type="string">Столица
+          <div></div></th>
+        <th data-type="number" id='lnd-s'>Площадь
+          <div></div></th>
+        <th data-type="string" id='lnd-nas'>Население
+          <div></div></th>
+        <th data-type="number" id='lnd-vvp'>ВВП
+          <div></div></th>
+        <th data-type="string">Домен
+          <div></div></th>
+        <th data-type="string">Тел. код
+          <div></div></th>
+      </tr>
+    </thead>
+   
+  </table>
+</div>
+
+<script>
+
+$(document).ready(function() {
+	
+  var grid = new Grid(); 
+  grid.setElement('res'); 
+  zebraRows('tbody tr:odd td', 'odd');
+
+  $('tbody tr').hover(function(){
+  $(this).find('td').addClass('hovered');
+ }, function(){
+  $(this).find('td').removeClass('hovered');
+ });
+
+  $('tbody tr').addClass('visible cont_visible _vis');
+
+ //---
+  $('#info').click(function(event){
+	 event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true);
+	 var el = $(this).find('p')
+	 if( $(el).is(':visible') )  $(el).css('display','none')
+	    else $(el).css('display','block')
+  })
+  
+   $('#filter-row').bind('keypress', function(event){
+    if($.browser.opera){
+	  if (event.keyCode == 27 || $(this).val() == '') {
+      $(this).val('');
+	  $('#filter-krest').animate({opacity: '0'}, 600).css('cursor', 'default');
+      $('tbody tr').addClass('visible');
+	  showRows(); 
+    }
+	}
+  })
+  $('#filter-row').bind('keyup', function(event){
+    if (event.keyCode == 27 || $(this).val() == '') {
+      $(this).val('');
+	  $('#filter-krest').animate({opacity: '0'}, 600).css('cursor', 'default');
+      $('tbody tr').addClass('visible');
+	  showRows(); 
+    }
+    else {
+		if(navigator.appName != 'Microsoft Internet Explorer'){
+			$('#filter-krest').css('cursor', 'pointer').css('opacity', '1')
+		}
+		else{
+	      $('#filter-krest').css('cursor', 'pointer').animate({opacity: '1'}, 800)
+		}
+      filterRows('tbody tr', $(this).val());
+    }
+  })
+  
+   $('#filter-krest').click(function(){
+	  $('#filter-row').val('');
+	  $('#filter-krest').css('opacity', '0').css('cursor', 'default');
+      $('tbody tr').addClass('visible');
+	  showRows(); 
+  })
+  
+  $(filtr).on('select', function(e){
+      filterRowsCont('tbody tr', e.value);
+  });
+  
+  var fout = false;  
+  $('.filter-items').hover(function(){
+   if(fout){ $(this).stop(true).css('opacity', '1'); fout = false }
+    
+  }, function() {
+	 fout = true;
+     $(this).animate({opacity: "1"}, 1000).animate({opacity: "hide"}, 500, 'swing', function(){ filtr.close();fout = false});
+		
+  });
+
+  $(document).click(function(){
+	 if(filtr.isOpen == true) filtr.close();
+	 if( $('#info p').is(':visible') ) $('#info p').css('display','none')
+  })
+
+});
+
+ function zebraRows(selector, className){$(selector).removeClass(className).addClass(className)}
+ function getCont(c){
+	switch(c){
+	    case'sa': return 'Юж.Ам.';
+		case'cam': return 'Центр.Ам.';
+		case'ca': return 'Карибы';
+		case'na': return 'Сев.Ам.';
+		case'eu': return 'Европа';
+		case'az': return 'Азия';
+		case'af': return 'Африка';
+		case'oc': return 'Океания';
+	}}
+ function filterRows(selector, query) {
+  query = $.trim(query);
+  query = query.replace(/ /gi, '|');
+  var text;
+  $(selector).each(function() {
+	 text = "";
+	 $(this).children('td').each(function() {
+       text += "!" + $(this).text() + "/";
+    });
+    if(text.search(new RegExp(query, "i")) < 0) $(this).removeClass('visible') 
+	 else { $(this).addClass('visible');
+	 }
+  });
+  showRows();
+ } 
+
+function filterRowsCont(selector, c) {
+     if(c == 'res') $(selector).addClass('cont_visible');
+     else { 
+     $(selector).each(function() {
+		 if($(this).find('td:eq(1)').text() == getCont(c)) $(this).addClass('cont_visible');
+		 else $(this).removeClass('cont_visible');
+     });
+	 }
+	 showRows();
+} 
+
+function showRows(){
+	 $('tbody tr').each(function() {
+		 if($(this).hasClass('visible') && $(this).hasClass('cont_visible')) $(this).show().addClass('_vis');
+		 else $(this).hide().removeClass('_vis');
+	 });
+	  showZebra() 	 
+}
+function showZebra(){
+     var m=false;
+	 $('tbody tr._vis').each(function() {
+        $(this).find('td').toggleClass('odd', m); m ? m = false : m = true ;
+     });	
+}
+//---
+function Grid(){
+ var tab = $('#lnd'), 
+     self = this,
+     elem,
+     c = $('#thr th').length,
+     keys = [];
+ for(var i = 0; i<c; i++) { keys[i] = 1; }
+ 
+ function render(n){if (elem) elem.remove();elem = $('<tbody>');if($.browser.msie){for(var k = 0; k < lands.length; k++){if(n == 'res' || n == lands[k].ct ){var tr = "<td>"+lands[k].n+"</td><td>"+getCont(lands[k].ct)+"</td><td>"+lands[k].st+"</td><td>"+lands[k].s+"</td><td>"+lands[k].nas+"</td><td>"+lands[k].vvp+"</td><td>"+lands[k].idom+"</td><td>"+lands[k].t_cod+"</td>";
+ var r = $('<tr></tr>');r.html(tr);elem.append(r);}}} else{for(var k = 0; k < lands.length; k++){if(n == 'res' || n == lands[k].ct ){s0 = $("<td/>",{text: lands[k].n });s1 = $("<td/>",{text: getCont(lands[k].ct) });s2 = $("<td/>",{text: lands[k].st });s3 = $("<td/>",{text: lands[k].s });s4 = $("<td/>",{text: lands[k].nas });s5 = $("<td/>",{text: lands[k].vvp });s6 = $("<td/>",{text: lands[k].idom });s7 = $("<td/>",
+ {text: lands[k].t_cod });var r = $('<tr>').append(s0).append(s1).append(s2).append(s3).append(s4).append(s5).append(s6).append(s7);elem.append(r);}}}tab.append(elem);}	
+ this.setElement = function(n){if (!elem) {render(n);setArrow(0);sortGrid(0, 'string');}else { render(n);}}
+
+ tab.onmousedown = tab.onselectstart = function() {return false;}
+
+ $('#thr th').click(function() {
+        var i = this.cellIndex;
+		setArrow(i); 
+        sortGrid(i, this.getAttribute('data-type'));
+		return;
+ });
+
+function setArrow(n){
+	      var headR = document.getElementById('thr');
+		  var tar = headR.cells[n];
+		  for(var i=0; i<c; i++){
+			  var el = headR.cells[i];
+			if(el.className == 'arrow') el.className = ''
+		  }
+		  tar.className = 'arrow';
+		  var d = tar.getElementsByTagName('div')[0];
+		  if(keys[n] == 1) d.className = 'top';
+		  else d.className = 'down';
+		}
+
+function sortGrid(colNum, type) {
+var compare, rowsArray = [];for(var i = 0; i < $('#lnd tbody').children().length ; i++) {rowsArray.push($('#lnd tbody').children().get(i)); }
+switch(type){case 'number':compare = function(rowA, rowB) {return keys[colNum]*(rowA.cells[colNum].innerHTML - rowB.cells[colNum].innerHTML);};break;case 'string':compare = function(rowA, rowB) { 
+var rowA = rowA.cells[colNum].innerHTML;
+var rowB = rowB.cells[colNum].innerHTML;
+if (colNum == 4){rowA = parseFloat( rowA );rowB = parseFloat( rowB );}return keys[colNum]*(rowA > rowB ? 1 : -1);};break;}
+
+        rowsArray.sort(compare);
+		keys[colNum] *= -1 ; 
+        $('#lnd tbody').remove();
+        var tbody = $('<tbody>');
+        for(var i=0; i<rowsArray.length; i++) {
+          tbody.append(rowsArray[i]);
+        }
+        tab.append(tbody);
+		$('.visible td').removeClass('odd');
+        showZebra();
+  }
+}
+//---Filter --
+function Filter(options){
+ var self = this;
+ var elem;
+ var isActive = false;
+ var filterItems;
+ 
+ this.isOpen = false;
+  
+  function render() {
+    var template = _.template(options.template);
+    elem = $(template({
+       title: options.title,
+       items: options.items
+    }));
+	filterItems = elem.find('.filter-items');
+	
+	elem.on('mousedown selectstart', false);
+    elem.on('click', '.filter-title', onTitleClick);
+    elem.on('click', '.filter-items', onItemClick);
+	
+  }
+  
+  this.getElement = function() {
+    if (!elem) render();
+    return elem;
+  }
+  
+  function onTitleClick(event) { 
+  event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true); 
+    if (elem.hasClass('filter-open')) {
+      self.close();
+    } else {
+      self.open();
+    }
+  }
+
+  function onItemClick(event) {
+	event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true);   
+    selectItem( $(event.target) );
+    return false;
+  }
+
+  function selectItem(item) {
+	self.close();
+	self.setActiv(item.attr('name'));
+    $(self).trigger({
+    type: 'select',
+    value: item.attr('name')
+    });
+  } 
+
+  this.setActiv = function(n){
+    if(!isActive){
+	isActive = true;
+	elem.addClass('act');	
+	var el = $('<li class="reset-filter" name="res">');
+	el.html('Сбросить');
+	el.appendTo(".filter-items")
+	}
+	if(n == 'res'){
+	isActive = false;
+	elem.removeClass('act');
+	filterItems.find('.reset-filter').remove();
+	}
+  }
+
+  this.open = function() {
+    elem.addClass('filter-open');
+	$('.filter-items').css('display', 'block');
+	self.isOpen = true;
+  };
+
+  this.close = function() {
+    elem.removeClass('filter-open');
+	$('.filter-items').css('display', 'none');
+	self.isOpen = false; 
+  };
+}
+
+var filtr = new Filter({
+  title: ' ',
+  items: [
+    {lin: 'eu', html: 'Европа'},
+    {lin: 'az', html: 'Азия'},
+    {lin: 'af', html: 'Африка'},
+	{lin: 'na', html: 'Сев.Ам.'},
+	{lin: 'cam', html: 'Центр.Ам.'},
+	{lin: 'sa', html: 'Юж.Ам.'},
+	{lin: 'ca', html: 'Карибы'},
+	{lin: 'oc', html: 'Океания'},
+  ],
+  template: $('#filter-template').html(),
+  //itemTemplate: $('#menu-item-template').html()
+})
+
+filtr.getElement().appendTo('#lnd-name');
+
+
+if(  navigator.userAgent.indexOf('Firefox/') != -1 ) { 
+  $('#lnd-name .filter').css('top', '54px');  
+}
+
+//-----
+function Tooltip(options) {
+
+  var offsetFromElement = (options.offset === undefined) ? 0 : options.offset;
+  var tooltipElem;
+  var isEnabled = true;
+
+  var elem = options.elem;
+  var html = options.html;
+
+  elem.hover(show, hide);
+
+  function hide() {
+	if(isEnabled)  
+    getTooltipElem().stop(true).animate({opacity: "hide", left: '-=50px'}, 300);
+	isEnabled = true;
+  }
+
+  function show() {
+    var elemCoords = elem.offset();
+    
+    var tooltipElem = getTooltipElem();
+
+    var winLeft = $(window).scrollLeft();
+    var winTop = $(window).scrollTop();
+
+    tooltipElem.appendTo('body'); 
+
+    var left = elemCoords.left + (elem.outerWidth() - tooltipElem.outerWidth())/2^0;
+    if (left < winLeft) left = winLeft; 
+
+    var top = elemCoords.top - tooltipElem.outerHeight() - offsetFromElement;
+    if (top < winTop) { 
+      top = elemCoords.top + elem.outerHeight() + offsetFromElement;
+    }
+
+    tooltipElem.css({
+        left: left,
+        top: top - 10
+    });
+	
+	tooltipElem.stop(true, true).css('opacity', '.5').animate({opacity: "1", top: '+=10px'}, 100).animate({opacity: "1"}, 1500, 'swing', function(){hide(); isEnabled = false});
+  }
+
+  function getTooltipElem() {
+    if (!tooltipElem) {
+      tooltipElem = $('<div/>', {
+        "class" : 'tooltip',
+        html: html
+      });
+    }
+    return tooltipElem.css('display', 'block');
+  }
+
+}
+
+new Tooltip({
+  elem: $('#lnd-s'),
+  html: "километр квадр."
+});
+
+new Tooltip({
+  elem: $('#lnd-nas'),
+  html: "тыс.чел. / год"
+});
+
+new Tooltip({
+  elem: $('#lnd-vvp'),
+  html: "млрд. долл."
+});
+
+</script>
+</body>
+</html>

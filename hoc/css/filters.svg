@@ -1,0 +1,26 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+
+    <filter id="colorMatrix">
+      <feColorMatrix values="0.1" type="saturate"/>
+    </filter>
+
+    <filter id="grey">
+      <feColorMatrix values="0" type="saturate"/>
+    </filter>
+
+    <filter id="kino">
+      <feComponentTransfer>
+        <feFuncR type="gamma" exponent="1.2" amplitude="1.5" offset=".1"/>
+        <feFuncG type="gamma" exponent="1.2" amplitude="1.2" offset=".1"/>
+        <feFuncB type="gamma" exponent="1.2" amplitude="1.3" offset=".1"/>
+      </feComponentTransfer>
+      <feColorMatrix values="0.5" type="saturate"/>
+    </filter>
+
+  </defs>
+</svg>

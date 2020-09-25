@@ -1,0 +1,21 @@
+#top-header{
+	background:url(../img/logo-g.png) no-repeat center 5px;
+}
+
+#left-menu span{
+	background:#ff0;
+}
+
+h1 span{
+	color:#ff0;
+}
+
+.scroller{
+	background:#ff0;
+}
+
+.theme-dark .nivo-controlNav a.active {
+	background:#ff0;
+}
+
+

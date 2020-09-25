@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>АМИ индекс</title>
+<meta name="description" content="">
+<meta name="keywords"    content="">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/themes/bar/bar.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/themes/nivo-slider.css" type="text/css" media="screen" />
+<!--<script src="http://code.jquery.com/jquery-latest.js"></script> -->
+<script type="text/javascript" src="js/jquery.min.1.8.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
+<link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+
+<!--[if lt IE 9]> 
+   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+<![endif]-->
+<!--[if lt IE 10]>
+    <script type="text/javascript" src="js/PIE.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            if (window.PIE) {
+                $('.rounded').each(function() {
+                    PIE.attach(this);
+                });
+            }
+        });
+    </script>
+    <![endif]-->
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="css/style_ie7.css" type="text/css">
+    <![endif]-->
+    <!--[if IE 8]>
+    <link rel="stylesheet" href="css/style_ie8.css" type="text/css">
+<![endif]-->
+</head>
+
+<body>
+<header>
+  <div class='black_w100'>
+    <div class='header_top pos_rel'>
+		  <div class='soz_wrapper left'>
+			  <a href='#' class='soz_btn' id='fb_a'></a>
+				<a href='#' class='soz_btn' id='tw_a'></a>
+				<a href='#' class='soz_btn' id='vk_a'></a>
+			</div>
+			<div class='telefon_wrapper left'>
+			  <small>+3 093</small> 153 90 90
+			</div>
+			<div class='acc_wrapper pos_abs'>
+			  <a href='#' class='sign_out' >Выйти</a>
+				<a href='#' class='btn red_btn' id='acc_btn'>Аккаунт</a>
+			</div>
+		</div>
+  </div>
+
+  <div class='header_main pos_rel'>
+	  <div class='logo_wrapper'>
+		 <a href='#' class='logo_a inl_block'><p class='logo'>АМИ</p></a>
+		 <p class='slogan'>Алмазные маникюрные инструменты</p>
+		</div>
+		<div class='bugger pos_abs'>
+		  <div class='bugger_cont right pos_rel'>
+			  <p>Левушкин Кирилл</p>
+				<span>Корзина:&nbsp;<i id='tov'>0</i>&nbsp;<b id='ttext'>товаров</b></span><br>
+				<a href="#" class='btn white_btn' id='details'>Детали</a>
+				<a href="#" class='btn red_btn' id='oplata'>Оплатить</a>
+			</div>
+		</div>
+	</div>
+ 
+</header>
+
+<nav class='main_nav pos_rel'>
+ <ul class='main_nav_ul'>
+  <li id='home_li'><a href='#'></a></li>
+	<li><a href='#'>Каталог</a></li>
+  <li><a href='#'>Новости</a></li>
+  <li><a href='#'>Заточка</a></li>
+	<li><a href='#'>Где купить</a></li>
+	<li><a href='#'>Отзывы</a></li>
+	<li><a href='#'>Вакансии</a></li>
+	<li><a href='#'>Контакты</a></li>
+	<li id='right_li'>
+	</li>
+ </ul>
+ <form action="" method="get" name='search_form' id='search_form'>
+	<input type='text' name='search' class='inp_183' id='search' placeholder="Поиск...">
+	<button type="submit" id='search_submit'></button>
+ </form>
+
+</nav>
+
+<div class='ind_slider_wrapper pos_rel theme-bar'>
+  <div class='ind_slider_box'>
+        <div class="slider-wrapper theme-bar">
+            <div id="slider" class="nivoSlider">
+                <img src="images/slider_img/1.jpg" data-thumb="images/slider_img/1.jpg" alt="" title='Под торговой маркой "АМИ" продается маникюрный инструмент и сопутствующие товары.' />
+                <img src="images/slider_img/2.jpg" data-thumb="images/slider_img/2.jpg" alt="" title='Protocol Protocol Protocol' />
+								<img src="images/slider_img/3.jpg" data-thumb="images/slider_img/3.jpg" alt="" title='Другой Текст Баннера..' />
+            </div>
+        </div>
+				
+				<div class='ind_slider_right'>
+				  <div class='isr_cell'>
+					  <a href='#'>
+						  <img src="images/slider_img/sl_right_img1.jpg" class='isr_img_150' title="" />
+						</a>
+					</div>
+				  <div class='isr_cell'>
+					  <a href='#'>
+						  <img src="images/slider_img/sl_right_img1.jpg" class='isr_img_150' title="" />
+						</a>
+					</div>
+					<div class='isr_cell'>
+					  <a href='#'>
+						  <img src="images/slider_img/sl_right_img1.jpg" class='isr_img_150' title="" />
+						</a>
+					</div>
+				</div>
+	</div> 
+</div>
+
+<div class='under_slider'></div>
+
+<script src="js/nivo.slider.min.js" type="text/javascript"></script>
+<script>
+$(window).load(function() {
+  	
+  $('#slider').nivoSlider({
+        effect: 'fade',
+        slices: 15,
+        boxCols: 8, 
+        boxRows: 4, 
+        animSpeed: 200,
+        pauseTime: 3000,
+        startSlide: 0,
+        directionNav: true, // Next & Prev navigation
+        controlNav: false, // 1,2,3... navigation
+        controlNavThumbs: true, // Use thumbnails for Control Nav
+        pauseOnHover: true, // Stop animation while hovering
+        manualAdvance: false, // Force manual transitions
+        randomStart: false,
+				prevText:'prev',
+				nextText:'next'
+    });
+
+});
+
+</script>
+
+
+<div class='main_wrapper pos_rel clearfix'>
+
+  <div class='flower' id='flower_left'></div>
+	<div class='flower' id='flower_right'></div>
+	
+  <section class='left_section left pos_rel'>
+	  <div class='vote_wrapper shadow left_white rounded'>
+			<header>
+			  <h3 class='head_red'>Опрос</h3>
+			</header>
+			<p>Какое событие 2012 года вы считаете главным?</p>
+			
+			<div class='vote_base pos_rel'>
+				<a class='btn red_btn vote_btn shad63 right' id='vote_open'>Открыть</a>
+				
+				<div class='vote_down'>
+				  <span>Голосов: <em>213</em></span>
+					<a class='vote_res_a'>Результат</a>
+				</div>
+			</div>
+			
+			<div class='vote_open pos_rel'>
+			  
+				<form name='' id='vote_form'>
+				  <label class='radio_label' data-name='1'><span class='radio_icon'></span>Конец света</label> <br>
+					<label class='radio_label' data-name='2'><span class='radio_icon'></span>Выборы в парламент</label> <br>
+					<label class='radio_label' data-name='3'><span class='radio_icon'></span>Экономический рост</label> <br>
+					<label class='radio_label' data-name='4'><span class='radio_icon'></span>Не знаю</label>
+					
+					<input type="hidden" name='' id='vote_val' value="">
+				  <div><a class='btn red_btn vote_btn shad63 right' id='vote_btn'>Голосовать</a></div>
+					<!-- Если уже голосовал, добавляем класс disable к кнопе ) -->
+					
+				</form>
+				
+				
+				<div class='vote_down'>
+				  <span>Голосов: <em>213</em></span>
+					<a class='vote_res_a'>Результат</a>
+				</div>	
+			</div>
+			
+			<div class='vote_result pos_rel'>
+			  <div class='wrapper'>
+				  <div>
+				    Конец света <span class='sp1'>(<b>95</b>%,&nbsp;54&nbsp;ответов)</span>
+				    <div class='res_div'>
+					    <p></p>
+					  </div>
+					</div>
+					<div>
+				    Выборы в парламент <span class='sp1'>(<b>30</b>%,&nbsp;29&nbsp;ответов)</span>
+				    <div class='res_div'>
+					    <p></p>
+					  </div>
+					</div>
+					<div>
+				    Экономический рост <span class='sp1'>(<b>3</b>%,&nbsp;5&nbsp;ответов)</span>
+				    <div class='res_div'>
+					    <p></p>
+					  </div>
+					</div>
+					<div>
+				    Не знаю <span class='sp1'>(<b>10</b>%,&nbsp;11&nbsp;ответов)</span>
+				    <div class='res_div'>
+					    <p></p>
+					  </div>
+					</div>
+				</div>
+				
+				<div class='vote_down'>
+				  <span>Голосов: <em>213</em></span>
+					<a class='vote_res_a pas'>Вы уже голосовали</a>
+				</div>
+			</div>
+		</div>	
+		
+	  <div class='categories_wrapper shadow left_white rounded'>
+			<header>
+			  <h3 class='head_red'>Категории</h3>
+			</header>
+			<nav>
+			<ul class='cat_nav'>
+			  <li>Маникюрные наборы
+					<ul class='inner'>
+					  <li><a href='#'>Набор первый</a></li>
+						<li><a href='#'>Набор лучший</a></li>
+						<li><a href='#'>Набор десятый</a></li>
+					</ul>
+				</li>
+			  <li>Принадлежности для маникюра
+					<ul class='inner'>
+					  <li><a href='#'>Набор первый</a></li>
+						<li><a href='#'>Набор лучший</a></li>
+						<li><a href='#'>Набор десятый</a></li>
+					</ul>
+				</li>
+			  <li>Пилки для ногтей
+					<ul class='inner'>
+					  <li><a href='#'>Металлические</a></li>
+						<li><a href='#'>Лазерные</a></li>
+						<li><a href='#'>Стеклянные</a></li>
+						<li><a href='#'>Наждачные</a></li>
+						<li><a href='#'>Нейтронные</a></li>
+					</ul>
+				</li>
+				<li>Принадлежности для лица
+					<ul class='inner'>
+						<li><a href='#'>Стеклянные</a></li>
+						<li><a href='#'>Наждачные</a></li>
+						<li><a href='#'>Нейтронные</a></li>
+					</ul>
+				</li>
+				<li>Принадлежности для ресниц
+					<ul class='inner'>
+					  <li><a href='#'>Металлические</a></li>
+						<li><a href='#'>Лазерные</a></li>
+					</ul>
+				</li>
+				<li>Принадлежности для волос
+					<ul class='inner'>
+					  <li><a href='#'>Металлические</a></li>
+						<li><a href='#'>Лазерные</a></li>
+					</ul>
+				</li>
+				<li>Материал для наращивания ногтей
+					<ul class='inner'>
+					  <li><a href='#'>Металлические</a></li>
+						<li><a href='#'>Лазерные</a></li>
+					</ul>
+				</li>
+				<li class='last'>Принадлежности для педикюра
+					<ul class='inner'>
+					  <li><a href='#'>Металлические</a></li>
+						<li><a href='#'>Лазерные</a></li>
+					</ul>
+				</li>
+			</ul>
+			</nav>
+		</div><!-- categories_wrapper -->
+		
+	</section>
+  <section class='right_section right'>
+		<div class='pop_items_wrapper shadow right_white rounded pos_rel'>
+			<header>
+			  <h3 class='head_black'>Популярные товары</h3>
+			</header>
+			
+			<div class='pop_it_wrap_cell'>
+				<div class='img_wrap100 discount'>
+				  <div class='action_box'></div>
+				  <img src="images/no_img.png" width="100" height="90" alt="" title="" >
+				</div>
+				<div class='text'>
+				  <h5>Пилки для малых ногтей</h5>
+					<p><b>200</b> грн</p>
+					<a href='#' class='btn red_btn btn_80 shad63'>Подробнее</a>
+					<a href='#' class='btn cart_btn' title="Добавить"></a>
+				</div>
+			</div>
+			
+			<div class='pop_it_wrap_cell'>
+				<div class='img_wrap100 present'>
+				  <div class='action_box'></div>
+				  <img src="images/img1.jpeg" width="100" height="90" alt="" title="" >
+				</div>
+				<div class='text'>
+				  <h5>Пилки для ногтей</h5>
+					<p><b>250</b> грн</p>
+					<a href='#' class='btn red_btn btn_80 shad63'>Подробнее</a>
+					<a href='#' class='btn cart_btn' title="Добавить"></a>
+				</div>
+			</div>
+			
+			<div class='pop_it_wrap_cell last'>
+				<div class='img_wrap100'>
+				  <div class='action_box'></div>
+				  <img src="images/img1.jpeg" width="100" height="90" alt="" title="" >
+				</div>
+				<div class='text'>
+				  <h5>Принадлежности для лица</h5>
+					<p><b>250</b> грн</p>
+					<a href='#' class='btn red_btn btn_80 shad63'>Подробнее</a>
+					<a href='#' class='btn cart_btn' title="Добавить"></a>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class='main_content shadow right_white rounded pos_rel'>
+			<header>
+			  <h3 class='head_black'>О нас</h3>
+			</header>
+		  <div class='main_content_inner'>
+			  <div class='img_wrap280'><img src="images/img2.jpeg" width="280" height="170" alt="" title="Title" ></div>
+			  <p>
+				Под торговой <span class='ali'>маркой "АМИ"</span> продается маникюрный инструмент и сопутствующие товары высокого качества. На наших точках покупатель может найти любую вещь, которая может ему понадобиться, чтобы иметь красивый маникюр и не только... В ассортименте АМИ, который постоянно расширяется,  более 500 товарных наименований.<br><br> 
+        Это пилочки, ножницы, кусачки, пинцеты, расчески, бигуди и т.д. Мы всегда работаем над введением разных новинок и уникальных предложений, которые порадуют каждого покупателя.<br><br>
+				
+				Под торговой маркой "АМИ" продается маникюрный инструмент и сопутствующие товары высокого качества. На наших точках покупатель может найти любую вещь, которая может ему понадобиться, чтобы иметь красивый маникюр и не только... В ассортименте АМИ, который постоянно расширяется,  более 500 товарных наименований.<br><br>
+        Это пилочки, ножницы, кусачки, пинцеты, расчески, бигуди и т.д. Мы всегда работаем над введением разных новинок и уникальных предложений, которые порадуют каждого покупателя.<br><br>
+				</p>
+				
+			</div>
+		</div>
+		
+	</section>
+</div>
+
+<footer class='main_footer shadow rounded pos_rel'>
+	<div class='foot_top_black pos_rel'></div>
+  <div class='foot_left_box pos_abs'>
+	  <p class='copyright pos_abs'>Copyright 2012. ami.in.ua</p>
+	</div>
+  <div class='foot_right_box pos_abs'>
+	  <section>
+		  <h4>Где купить?</h4>
+			<ul class='foot_list'>
+				<li>ТВК «Глобус»</li>
+				<li>ТЦ «Метроград»</li>
+				<li>ТЦ «Навигатор»</li>
+				<li>ТРЦ «Променада Центр»</li>
+				<li>ТЦ «Олимпийский»</li>
+				<li>ТРЦ «Dream Town»</li>
+			</ul>
+			<a href="#" class='full_list pos_abs'>Полный список>></a>
+		</section>
+	  <section>
+		  <h4>Случайные товары</h4>
+				<div class='foot_tovs_cell clearfix'>
+				  <div class='img_wrap45 left rounded'><a href='#'><img src="images/img5.jpeg" width="45" height="45" alt="" title=""></a></div>
+				  <h6><a href='#'>Принадлежности для лица</a></h6>
+					<p>300 грн.</p>
+				</div>
+				<div class='foot_tovs_cell clearfix'>
+				  <div class='img_wrap45 left rounded'><a href='#'><img src="images/img5.jpeg" width="45" height="45" alt="" title=""></a></div>
+				  <h6><a href='#'>Принадлежности для сухого лица</a></h6>
+					<p>200 грн.</p>
+				</div>
+				<div class='foot_tovs_cell clearfix'>
+				  <div class='img_wrap45 left rounded'><a href='#'><img src="images/img5.jpeg" width="45" height="45" alt="" title=""></a></div>
+				  <h6><a href='#'>Принадлежности..</a></h6>
+					<p>300 грн.</p>
+				</div>
+		</section>
+		<section class='foot_contacts'>
+		  <h4>Наши Контакты</h4>
+		  <p><span>Телефон :</span><br> &nbsp;&nbsp;(063) 816 53 20<br>  &nbsp;&nbsp;(067) 604 42 52</p>
+			<p><span>Email :</span><br> &nbsp;&nbsp;info@eyes.net.ua</p>
+			<div class='foot_auch pos_abs'>Также вы сможете связаться с нами через <a href='#'>контактную форму</a></div>
+		</section>
+	
+	</div>
+</footer>
+
+<div class='consult off'><a href="#"></a></div>
+
+</body>
+</html>

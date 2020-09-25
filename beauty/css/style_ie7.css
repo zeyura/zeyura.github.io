@@ -1,0 +1,34 @@
+/* Oh, God! I hate Microsoft!) */
+
+.i_block {display:inline; zoom:1;}
+.clearfix{ zoom: 1;/* спец-свойство IE */}
+
+#contact_form ol li{list-style-position:outside;}
+
+#countbl {}
+.pagination{ top:100px;}
+
+.tp-carusel .block{display:inline; zoom:1;}
+
+#seven-cause { margin-bottom: 40px;}
+
+#contact_form2 .txt{ margin-left:-30px;}
+#contact_form2 ol li{ margin-bottom:13px;}
+.red-timer .digit { left:-1px; }
+
+#sertif {margin-bottom:60px;}
+
+.rev-cell .text { top:-20px;}
+
+.sertif-inner h2.clients { position:relative; z-index:5;}
+.clients-wrap img{ position:relative;}
+
+#action .left_column{ margin-left:0px;}
+#action .left_column .txt {  margin-left:30px;}
+#action .right_column{ width:525px; margin-left:45px;}
+
+
+.order-wrap .txt { padding:7px 10px 4px; position:relative; top:5px;}
+
+#send-form label span { position:relative; top:-4px;}
+.send-wrap .right .title{  margin-top:-9px;}

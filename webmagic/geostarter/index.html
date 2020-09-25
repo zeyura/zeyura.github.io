@@ -1,0 +1,644 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Geostarter - мир ждёт тебя!</title>
+<meta name='description' content='Демонстрационная страница географического портала'>
+<meta name='keywords' content='пример возможности css3 java-script'>
+<meta name="robots" content="index, follow">
+<link href="reset.css" rel="stylesheet">
+<link href="main.css" rel="stylesheet">
+<link href="form-win.css" rel="stylesheet">
+<link rel="stylesheet" href="themes/bar/bar.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="themes/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="themes/jquery.ui.autocomplete.css" type="text/css" />
+<link href="favicon.ico" rel="shortcut icon" >
+<script src="../scripts/jquery.1.8.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../scripts/nivo.slider.min.js"></script>
+<script src="scripts/lands.js" type="text/javascript" ></script>
+<script src="scripts/map.js" type="text/javascript" ></script>
+
+<!--[if lt IE 9]> 
+   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+  <![endif]-->
+</head>
+
+<body>
+<header>
+<div id='logo'></div>
+
+<aside id='as1'>
+
+  <div id="search">
+   <form name='search-form' action="" onSubmit="alert('Запрос побежал на сервер..:)')">
+   <input id='auto_search' type='text' placeholder="Что ищем?" maxlength="23">
+   <div id='search_krest'></div>
+   </form>
+  </div>
+  <div id="set" onClick="alert('Извините, модуль настройки в работе!\nСпасибо за терпение.')"></div>
+  
+<div id="avtorize">
+  <div id="rega">Регистрация</div>
+  <div id="sign-in">Вход</div>
+</div>
+</aside>
+</header>
+
+<div id='bline'><div class='corob'><div class="slider-wrapper theme-bar"><div id="slider" class="nivoSlider">
+  <img src="img/slider/tuman.jpg" data-thumb="img/slider/tuman.jpg" alt="" title="солнце над фантастическими туманными горами.." />
+  <img src="img/slider/taiti.jpg" data-thumb="img/slider/taiti.jpg" alt="" title='райские острова на Таити..' />
+  <img src="img/slider/kan.jpg" data-thumb="img/slider/kan.jpg" alt="" />
+  <img src="img/slider/duba.jpg" data-thumb="img/slider/duba.jpg" alt="" title="огни ночного Дубаи.." />
+</div></div></div></div>
+
+<div id="boss" >
+
+<div id='left'>
+<nav>
+
+<ul id='menu1'>
+<li>Еврозона</li><div></div>
+<li>Страны ЕЭС</li><div></div>
+<li>Страны с высоким ИРЧП</li><div></div>
+<li>Страны Шенгенской зоны</li><div></div>
+<li>Страны с безвизовым режимом</li><div></div>
+<li>Где отдохнуть</li><div></div>
+<li>Экзотические страны</li><div></div>
+<li>Экстремальный туризм</li>
+</ul>
+
+
+<div id='tab-link'>
+<div id='tablink-info'><span></span>Переход к полной таблице стран</div>
+</div>
+
+<ul id='menu2'>
+<li>Крупнейшие города</li>
+<div></div>
+<li>Острова</li>
+<div></div>
+<li>Реки</li>
+<div></div>
+<li>Моря</li>
+<div></div>
+<li>Озера</li>
+<div></div>
+<li>Водопады</li>
+<div></div>
+<li>Вулканы</li>
+<div></div>
+<li>Горные вершины</li>
+<div></div>
+<li>Пустыни</li>
+<div></div>
+</ul>
+</nav>
+</div>
+
+<div id='content'>
+
+<div id="map" >
+    <div id='map-sam' class='map-cont'></div>
+    <div id='map-nam' class='map-cont'></div>
+    <div id='map-cam' class='map-cont'></div>
+    <div id='map-car' class='map-cont'></div>
+    <div id='map-afr' class='map-cont'></div>
+    <div id='map-azia' class='map-cont'></div>
+    <div id='map-euro' class='map-cont'></div>
+    <div id='map-ocean' class='map-cont'></div>
+    <img src="img/map/prozy.png" width="440" height="264" usemap="#map1">
+    <div id='menu-sam' class='menu-cont'>
+      <h3>Южная Америка</h3>
+      <ul>
+      </ul>
+    </div>
+    <div id='menu-nam' class='menu-cont'>
+      <h3>Северная Америка</h3>
+      <ul>
+      </ul>
+    </div>
+    <div id='menu-cam' class='menu-cont'>
+      <h3>Центральная Америка</h3>
+      <ul>
+      </ul>
+    </div>
+    <div id='menu-car' class='menu-cont'>
+      <h3>Карибский Бассейн</h3>
+      <ul>
+      </ul>
+    </div>
+    <div id='menu-afr' class='menu-cont'>
+      <h3>Африка</h3>
+      <ul>
+      </ul>
+    </div>
+    <div id='menu-azia' class='menu-cont'>
+      <h3>Азия</h3>
+      <ul>
+      </ul>
+    </div>
+    <div id='menu-euro' class='menu-cont'>
+      <h3>Европа</h3>
+      <ul>
+      </ul>
+    </div>
+    <div id='menu-ocean' class='menu-cont'>
+      <h3>Океания</h3>
+      <ul>
+      </ul>
+    </div>
+  </div>
+
+  <map name='map1' id='map1'>
+    <area onMouseOver="map.getCont('#map-sam')" onMouseOut="map.hideCont('#map-sam')" onClick="map.showMenu(event, '#menu-sam')" shape="poly" coords="119,152,168,183,157,206,130,237,128,260,116,259,122,202,109,178" name='s_am' id='sudam'  class="conts">
+    <area onMouseOver="map.getCont('#map-nam')" onMouseOut="map.hideCont('#map-nam')" onClick="map.showMenu(event, '#menu-nam')" shape="poly" coords="6,44,54,43,61,25,107,5,137,5,114,29,133,57,145,101,112,129,111,138,103,144,103,148,83,151,56,116,37,74,5,89" name='n_am' class="conts">
+    <area onMouseOver="map.getCont('#map-cam')" onMouseOut="map.hideCont('#map-cam')" onClick="map.showMenu(event, '#menu-cam')" shape="poly" coords="95,150,95,154,107,163,113,162,109,159,108,153,102,150" name='c_am' title="Центральная Америка" class="conts">
+    <area onMouseOver="map.getCont('#map-car')" onMouseOut="map.hideCont('#map-car')" onClick="map.showMenu(event, '#menu-car')" shape="poly" coords="108,142,112,142,115,138,125,148,118,148,112,146" name='car' title="Карибский бассейн" class="conts">
+    <area onMouseOver="map.getCont('#map-afr')" onMouseOut="map.hideCont('#map-afr')" onClick="map.showMenu(event, '#menu-afr')" shape="poly" coords="249,129,250,138,260,158,273,158,256,182,259,195,269,191,266,209,260,209,261,197,254,198,244,222,230,222,223,196,219,169,196,167,188,156,188,142,200,124,221,122,231,131,234,127" name='afr' class="conts">
+    <area onMouseOver="map.getCont('#map-azia')" onMouseOut="map.hideCont('#map-azia')" onClick="map.showMenu(event, '#menu-azia')" shape="poly" coords="250,130,260,154,268,154,289,140,303,164,341,186,361,188,365,170,359,141,437,53,325,10,289,38,289,52,284,52,284,57,287,57,288,86,291,89,291,93,271,94,269,113,239,113,240,121,251,122" name='azia' class="conts">
+    <area onMouseOver="map.getCont('#map-euro')" onMouseOut="map.hideCont('#map-euro')" onClick="map.showMenu(event, '#menu-euro')" shape="poly" coords="197,122,197,110,206,109,203,100,208,96,195,92,203,75,213,90,218,86,214,71,182,63,179,54,195,54,188,64,182,63,214,71,229,44,242,41,225,27,222,22,222,17,241,15,237,26,225,27,242,41,259,48,269,41,279,28,264,17,264,13,288,11,279,17,264,17,279,28,295,25,277,39,289,48,283,52,283,58,286,58,286,86,289,92,269,93,268,102,265,106,268,112,258,112,249,107,243,113,239,113,238,120,207,120,202,123" name='euro' class="conts">
+    <area onMouseOver="map.getCont('#map-ocean')" onMouseOut="map.hideCont('#map-ocean')" onClick="map.showMenu(event, '#menu-ocean')" shape="poly" coords="348,225,345,203,354,200,363,189,374,186,366,178,368,173,393,177,426,196,425,228,414,244,385,239,370,221,361,220,355,225" name='ocean' class="conts">
+  </map>
+  
+  <article>
+   <section id=''>
+   <div>Случайная статья</div>
+   <h1>Каймановы острова</h1>
+   <p><img src="img/kaiman.jpg" width="250" height="155">
+   <big>Каймановы острова (англ. Cayman Islands) — заморская территория Великобритании в Вест-Индии, в Карибском море.
+В состав владения входят острова Большой Кайман, Малый Кайман и Кайман-Брак.
+Площадь — 264 км². Население — 54 397 чел. (2010) — мулаты, белые, негры. Свыше 4/5 населения живёт на острове Большой Кайман. Административный центр — город Джорджтаун.
+Основные занятия населения — обслуживание туристов, выращивание черепах.</big></p>
+   <p>
+   Три острова Каймановых островов, Большой Кайман, Кайман-Брак и Малый Кайман, расположены в 240 км к югу от острова Куба, в 730 км к югу от Майами (штат Флорида, США) и в 267 км к северо-западу от Ямайки. Столица Каймановых островов, Джорджтаун, расположена на западном побережье острова Большой Кайман.
+Самый большой остров в составе Каймановых островов — Большой Кайман, площадь которого составляет 197 км², а длина — 35 км при ширине в 6,5 км. Высшая точка острова — 16 м. Значительную часть острова занимает лагуна Норт-Саунд (56 км²).
+Остров Кайман-Брак лежит в 142 км к северо-востоку от Большого Каймана. Длина — 19 км при средней ширине в 2 км, площадь — около 38 км². Вдоль всего острова тянется известняковое плато Блафф, достигающее у восточной оконечности Кайман-Брака высоты в 42 метра над уровнем моря (высшая точка островов).
+Остров Малый Кайман лежит в 8 км к западу от острова Кайман-Брак. Площадь Малого Каймана составляет 28,5 км². Поверхность острова низменная, лишь в северной части берег достигает высоты в 12 метров...</p>
+<p class='dale'>По материалам <a href="http://ru.wikipedia.org/wiki/" target="_blank">wikipedia.org</a> <span>читать далее </span>  </p>
+   </section>
+   <section>
+   <div>Туристу на заметку</div>
+   <h1>МачуПикчу - город в небесах</h1>
+   <p><img src="img/machu.jpg" width="250" height="155">
+     Мачу-Пикчу (в переводе c кечуа "старая вершина") — город древней Америки, находящийся на территории Перу, на вершине горного хребта на высоте 2450 метров над уровнем моря, господствуя над долиной реки Урубамбы.
+      Некоторые археологи полагают, что этот город был создан великим правителем инков Пачакутеком за столетие до завоевания его империи приблизительно в 1440 году, и функционировал до 1532 года, когда испанцы вторглись на территорию империи инков. В 1532 году все его жители таинственно исчезли.
+   </p>
+   <p>Больше чем на 400 лет этот город был забыт и пребывал в запустении. Его обнаружил американский исследователь  профессор Хайрам Бингем 24 июля 1911 года. Когда он добрался сюда в сопровождении выделенного правительством отряда охранения и местного мальчика-проводника, он обнаружил живущих там крестьян. 
+   Как они рассказали ему, они жили там «свободными, без нежелательных визитеров, чиновников или сборщиков налогов». Кроме того, здесь прежде уже побывали любители достопримечательностей, оставившие свои начертанные углем имена на гранитных стенах.
+   Мачу-Пикчу, особенно после получения статуса Всемирного Наследия ЮНЕСКО, стал центром массового туризма. В день город посещают 2000 туристов; с целью сохранности памятника ЮНЕСКО требует сократить количество туристов в день до 800. Мачу-Пикчу находится в труднодоступном регионе. 
+   Для поддержки туризма были построена железная дорога до соседнего города Агуас-Калиентес из Куско через Ольянтайтамбо, от Ольянтайтамбо ходит более десяти поездов в день. От железнодорожной станции Агуас-Калиентес до Мачу-Пикчу ходит автобус, который преодолевает восемь километров крутого подъёма по серпантину. 
+   ЮНЕСКО выступило против строительства канатной дороги, чтобы ограничить потоки туристов. В результате землетрясения 2004 года участок железной дороги сильно пострадал, но был восстановлен.
+   Сохранилась оригинальная тропа инков до Мачу-Пикчу вдоль реки Урубамба через несколько перевалов, поход по которой требует нескольких дней...
+<p class='dale'>По материалам <a href="http://ru.wikipedia.org/wiki/" target="_blank">wikipedia.org</a> <span>читать далее </span>  </p>  
+  
+  </section>
+  </article>
+</div> 
+
+</div>
+
+<footer>
+<div >
+<p><a href=''>Новости</a> | <a href=''>Реклама</a> | <a href=''>Обратная связь</a> | <a href=''>Карта сайта</a> | <a href=''>Регистрация</a> | <a href=''>Вход</a> | <a href=''>Настройки</a> <span> 2012 <a href=''>ZET</a></span></p>
+</div>
+</footer>
+
+<div id='black-box'></div>
+<div id='reg-window' class='form-wrapper' >
+<h2>Регистрация</h2> <div id='close'></div>
+
+<form class="createaccount-form" id="createacc" name="createaccount" action="" method="post">
+  <input type="hidden" name="" id="" value="">
+
+  <div class="form-el" id="name">
+  <fieldset>
+  <legend><strong>Как вас зовут</strong></legend>
+  <label class="firstname">
+  <strong>Имя</strong><br>
+  <input type="text" value="" name="fName" id="fName" class='text' maxlength="30" autofocus required>
+  </label><br>
+  <label class="lastname">
+  <strong>Фамилия</strong><br>
+  <input type="text" value="" name="lName" id="lName" class='text' maxlength="30">
+  </label>
+  </fieldset>
+  </div>
+  
+  <div class="form-el" id="psevdo">
+  <fieldset>
+  <legend><strong>Логин</strong></legend>
+  <label>
+  <strong>Введите имя пользователя (login)</strong><br>
+  <input type="text" name="login" id="login" value="" class='text' maxlength="30" required>
+  <div class="infomsg" id="info-login">
+  Можно использовать буквы латинского алфавита, цифры и точки.
+  </div>
+  </label><br>
+ 
+  <label><p></p>
+  <strong>Введите пароль</strong><br>
+  <input type="password" name="pass" id="pass" class='text pass' maxlength="25" required>
+  <div class="infomsg" id="info-pass">
+  Минимальная длина пароля шесть символов.
+  </div>
+  </label><br>
+ 
+  <label><p></p>
+  <strong>Подтвердите пароль</strong><br>
+  <input type="password" name="passAgain" id="passAgain" class='text pass' maxlength="25" required>
+  </label><br>
+  </fieldset>
+  </div>
+  
+  <div class="form-el" id="birthday">
+  <fieldset>
+  <legend><strong id="BirthdayLabel">Дата рождения</strong></legend>
+  <label class="b-d">
+  <input type="text" maxlength="2" value="" name="bDay" id="bDay" class='text birth'>
+  <span class="placeholder-text" id="bdd-pl" style="display: block; ">день</span>
+  </label>
+  <label class="month">
+  <select name='bMonth' id='bMonth' class='text'></select>
+  </label>
+  <label class="b-d">
+  <input type="text" maxlength="4" value="" name="bYear" id="bYear" class='text birth'>
+  <span class="placeholder-text" id="bdy-pl" style="display: block; ">год</span>
+  </label>
+  </fieldset>
+  </div>
+  
+  <div class="form-el" id="gender">
+  <label>
+  <strong id="coun">Пол</strong><br>
+  <select name='gend' id='gend' class='text'>
+    <option >не указывать</option>
+    <option selected>мужской</option>
+    <option >женский</option>
+  </select>
+  </label>
+  </div>
+  
+  <div class="form-el" id="phone">
+  <label for="phNumber">
+  <strong id="phNum">Мобильный телефон</strong><br>
+  <input type="text" maxlength="15" value="" name="phNumber" id="phNumber"  class='text'>
+  <div class="infomsg" id="fone-info">
+  Введите номер в формате<br>+(КС)XXX-XXXXXXX
+  </div>
+  </label>
+  </div>
+  
+  <div class="form-el" id="recovery-email">
+  <label for='email'>
+  <strong>Адрес электронной почты</strong><br>
+  <input type="text" name="email" id="email" value="" class='text'>
+  <div class="infomsg" id="rec-email-info">
+  Укажите адрес электронной почты, и ваш аккаунт будет защищен гораздо надежнее. Например, мы сможем отправить на этот адрес оповещение, если заметим в вашем аккаунте подозрительные действия.
+  </div>
+  </label>
+  
+  </div>
+ 
+  <div class="form-element" id="location">
+  <label>
+  <strong id="coun">Страна</strong><br>
+  <select name='country' id='country' class='text'></select> 
+  <div class="infomsg" id="location-infomessage">
+  Страна вашего постоянного проживания.
+  </div>
+  </label>
+  </div>
+  
+  <div class="form-el" id="reg-button">
+  <input id="submitbutton" name="submitbutton" type="submit" value="Готово" class=''>
+  </div>
+  </form>
+</div>
+
+
+<script>
+
+$(window).load(function() {
+  $('#slider').nivoSlider();
+});
+//--menu-
+$('#menu2 div').each(function(i) {
+	var m = "";
+	$(this).append('<ul/>')
+    switch(i){
+		case 0: m = 'citys'; break;
+		case 1: m = 'insels'; break;
+		case 2: m = 'rivers'; break;
+		case 3: m = 'meers'; break;
+		case 4: m = 'lakes'; break;
+		case 5: m = 'wodp'; break;
+		case 6: m = 'wulkans'; break;
+		case 7: m = 'bergs'; break;
+		case 8: m = 'deserts'; break;
+	}
+	for(var j=0;j<menu[m].length;j++) $(this).find('ul').append('<li>'+menu[m][j]+'</li>')
+	
+})
+
+    $("#menu2 li").click(function(){
+        $(this).next("div").slideToggle(300,'swing')
+        .siblings("div:visible").slideUp(150);
+        $(this).toggleClass("active");
+        $(this).siblings("li").removeClass("active");
+     })
+    $('#tab-link').click(function(){
+	    window.open('lands-table/lands.html')
+	})
+//----
+var map = new Map();
+
+$('.menu-cont').hover(function(){
+    if( map.isOpen ) $(this).stop(true, true)
+}, function(){
+   $(this).delay(200).animate({opacity:0},100,'linear', function(){ map.hideMenu() });
+});
+
+$('.menu-cont').click(function(event){
+  event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true);
+});
+$(document).click(function(event){
+  if( map.isOpen ) map.hideMenu()
+  if( $('#search').attr('class')=='activate' && event.target != ''){
+  $('#search').removeClass('activate'); 
+  $('#auto_search').val('') 
+  }
+});
+//-search
+$(document).ready(function() {
+
+	function searchAll(){
+		var s = '', c = 0
+		for(var i=0;i < lands.length; i++ ){
+			s += lands[i].n + '*' 
+		  if(lands[i].n != lands[i].st)	s += lands[i].st + '*';
+		}
+		var arr = s.split('*');
+		s = '';
+		
+		for(var k in menu){
+
+		 for(var i=0;i < menu[k].length; i++ ){ 
+		  if( !inAll(arr, menu[k][i]) )
+		      s+= menu[k][i] + '*' 
+		 }
+		}
+		
+		var a = s.split('*')
+		return arr.concat(a).sort()
+	}
+	
+	function inAll(a, n){
+	  for(var i=0;i < a.length; i++ ){
+		  if( n == a[i] ) return true
+	  }
+		return false;
+	}
+	
+    $("input#auto_search").autocomplete({
+    source:  searchAll(),
+    delay: 100,
+    minLength: 2,
+	autoFocus: false
+	});
+});
+
+
+$('#search').click(function(event){
+	event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true);
+	$(this).addClass('activate');
+})
+
+$('.ui-menu.ui-menu-item').click(function(event){
+})
+
+$('#auto_search').bind($.browser.opera ? 'keypress' : 'keyup', function(event){
+    if (event.keyCode == 27 || $(this).val() == '') {
+      $(this).val('');
+	  $('#search_krest').animate({opacity: '0'}, 400).css('cursor', 'default');
+    }
+    else {
+	  $('#search_krest').css({cursor: 'pointer'}).animate({opacity: '1'}, 400)
+		
+    }
+})
+
+$('#search_krest').click(function(){
+	  $('#auto_search').val('');
+	  $('#search_krest').css('opacity', '0').css('cursor', 'default');
+
+})
+//-- вход
+function signIn(){
+	var elem, passVal = false,
+	    self,
+		passMin = 6;
+	
+	function init(){
+		elem = $('<div/>', {'id':'in-window','class':'form-wrapper'});
+		var str = "<h2>Войти</h2><div id='close'></div><form type='post' action='' name='form-in'><div>Логин:</div><input type='text' name='log-in' id='log-in' class='text'><br><div>Пароль (минимум 6 символов):<span id='passforget'>Забыли пароль?</span><p></p></div><input type='password' name='pass-in' id='pass-in' class='text'><br><div><input type='checkbox' name='remember' id='remember'><label for='remember'>Запомнить меня</label></div><br><input type='submit' value='Войти' id='sub-in'><div><span id='reg'>Зарегистрироваться</span></div></form>"
+		$(elem).html(str);
+		$('body').append(elem);
+		$('#black-box').css('display', 'block');
+		if($.browser.webkit) $('.text', elem).css('font-size', '18px')
+		
+		elem.on('click','#close',close);
+		elem.on('click','#sub-in',submit);
+		elem.on('click','#passforget',passForget);
+		elem.on('click','#reg',toReg);
+		elem.on('keypress','#log-in',login);
+		elem.on('keypress','#pass-in',pass);
+		elem.on($.browser.opera ? 'keypress' : 'keyup','.text',textPress);
+		
+		elem.on('selectstart', false);
+	}
+	
+	function close(){
+		$('#black-box').css('display', 'none');
+		$(elem).remove();
+	}
+
+	function submit(){
+		if(passVal){
+	    alert("Запрос отправлен!") 	
+		close()
+		}
+		else alert('Пароль некорекктен!')
+		return false;
+	}
+	function pass(event){
+		var k = event.keyCode,
+		    el = $('#in-window p'),
+			self = $('#pass-in:focus');
+		if(event.which!=0 ) k = event.which
+		if(k >= 65 && k < 123) el.text('EN')
+		if(k >= 1040 && k < 1101) el.text('RU')
+		invalid(self, 1)
+	}
+	function login(event){
+	}
+	
+	function invalid(s, p){
+		if(s.val().length < passMin - p) {  
+			s.addClass('invalid'); 
+			passVal = false ; 
+		}
+		else {s.removeClass('invalid'); passVal = true }	
+	}
+
+	function textPress(event){
+	   var tar = event.target, p = 0, len
+	   $.browser.opera ? len = 2 : len = 1
+	   
+	   if (event.keyCode == 27){$(tar).val(''); $('#in-window p').text(''); passVal = false }
+	   if (event.keyCode == 8 && $(tar).attr('id')=='pass-in' ){
+	   if ($.browser.opera || $.browser.firefox) p = -1
+		    invalid($(tar),p)
+	   if( $(tar).val().length < len) $('#in-window p').text('')
+	   }
+	}
+	function passForget(){alert('Работа над модулем восстановления пароля ведётся! Ждите)')}
+	function toReg(){
+		close()
+		Registration($('#reg-window'))
+	}
+	
+	init();
+}
+
+$('#sign-in').click(function(){signIn()});
+
+//  -- Registr -
+function Registration(elem){
+	var self = this, formValid, passValid, passMin = 6;
+		
+    function init(){
+		$('#black-box').css('display', 'block')
+		elem.css('display', 'block')
+		
+		if(Regbegin){
+		  $('#reg-window .infomsg').prepend('<div/>')
+		  for(var i = 0; i < 12; i++){
+		    $('#bMonth',elem).append('<option>'+months[i]+'</option>');
+		  }
+		  for(var i = 0; i < lands.length; i++){
+		    $('#country',elem).append('<option>'+lands[i].n+'</option>');
+		  }
+		    Regbegin = false
+		}
+		
+		elem.on('selectstart', false)
+		elem.on('click','#close',close)
+		elem.on('click','#submitbutton',submit)
+		elem.on('keypress','.text',pass)
+		elem.on('keyup','.text',textPress)
+		elem.on('blur','.pass',clearP)
+		elem.bind('keyup','.birth',bPH)
+		elem.on('keypress','.birth',bDigit)
+		
+		elem.on('focus','.text',showInfo)
+		elem.on('blur','.text',hideInfo)
+	}
+    
+	function showInfo(event){
+		var t = event.target
+	    if( $(t).next('.infomsg')) $(t).next('.infomsg').css('display', 'block')
+	}
+	function hideInfo(event){
+		var t = event.target
+	    if( $(t).next('.infomsg') ) $(t).next('.infomsg').css('display', 'none')
+		if( $(t).attr('required') ){
+		    if( $(t).val()=='' ) $(t).addClass('redborder')
+			else $(t).removeClass('redborder')
+		}
+	}
+	function bDigit(event){
+		var k = event.keyCode || event.which
+		if( k == 8 || k == 9 ) return;
+		if(k<48 || k>57) return false;
+	}
+	function bPH(event){
+		var tar = event.target, s = $(tar).siblings('span')
+		if($(tar).val() != '') s.css('display','none')
+		else s.css('display','block')
+	}
+	function close(){
+		$('#black-box').css('display', 'none');
+		$(elem).css('display', 'none');
+	}
+	function submit(){
+		if ( $('#fName').val()!='' && $('#login').val()!='' && passValid ){
+	    alert("Запрос отправлен!") 	
+		close()
+		}
+		else alert('Форма не заполнена! Заполните, пожалуйста, все поля, обведенные красной рамкой!')
+		return false;
+	}
+	function invalid(s){
+		if(s.attr('id') == 'pass'){ 
+		  if(s.val().length < passMin) {  
+			s.addClass('invalid'); 
+		  }
+		  else {
+			  s.removeClass('invalid'); 
+			  }	
+		}
+		else {
+			if(s.val() !== $('#pass').val() || $('#pass').val().length < passMin) {s.addClass('invalid').removeClass('green'); passValid = false}
+			else{ 
+			  if($('#pass').val().length >= passMin)
+			  s.removeClass('invalid').addClass('green'); passValid = true 
+			}
+		}
+	}
+	function pass(event){
+		var tar = event.target, k = event.keyCode, el;
+		if($(tar).attr('type') == 'password'){    
+		  el = $(tar).parent('label').find('p');
+		  if(event.which!=0 ) k = event.which
+		  if(k >= 65 && k < 123) el.text('EN')
+		  if(k >= 1040 && k < 1101) el.text('RU')
+		  if(k >= 48 && k < 65) el.text('')
+		}
+		if($.browser.opera && k == 27){
+		   $(tar).val('');
+		   if($(tar).attr('type') == 'password'){
+			  el.text(''); passValid = false
+		   }
+		}
+	}
+	function textPress(event){
+	   var tar = event.target, len = 1, p = $(tar).parent('label').find('p');
+	   
+	   if (event.keyCode == 27){
+		   $(tar).val('');
+		   if($(tar).parent('label').attr('class') == 'b-d') $(tar).trigger('keyup')
+		   if($(tar).attr('type') == 'password'){
+		   p.text(''); passValid = false 
+		   }
+	   }
+	   if ( $(tar).attr('type')=='password' ){
+	        invalid($(tar))
+	   }
+	   if( $(tar).val().length < len) p.text('')
+	   if( $(tar).attr('required') ){
+		    if( $(tar).val()=='' ) $(tar).addClass('redborder')
+			else $(tar).removeClass('redborder')
+		}
+	}
+	function clearP(event){
+	   $(event.target).parent('label').find('p').text('')
+	}
+	
+	init();
+}
+var Regbegin = true;
+$('#rega').click(function(){ Registration($('#reg-window'))} )
+</script>
+</body>
+</html>

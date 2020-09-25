@@ -1,0 +1,11 @@
+/* --- slider Theme -----*/
+.theme-bar .nivo-directionNav a {
+  display:block;
+	width:26px;
+	height:47px;
+	text-indent:-9999px;
+	border:0;
+	opacity:0.8;
+}
+.theme-bar a.nivo-nextNav { right: -204px; background:url(../../../images/slider_arr_right.png); }
+.theme-bar a.nivo-prevNav { left: -37px; background:url(../../../images/slider_arr_left.png);  }

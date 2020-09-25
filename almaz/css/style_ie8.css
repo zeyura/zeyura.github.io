@@ -1,0 +1,20 @@
+.left_white { background: url(../images/left_white_bgd.png) repeat-y #f8f8f8;}
+.right_white{ background: url(../images/right_white_bgd.png) repeat-y #f8f8f8;}
+.full_white { background: url(../images/contact_bgd.png) repeat-y #f8f8f8;}
+
+.inp_183  { height:18px; padding-top:6px;}
+.rega     { margin-right:35px; }
+.inp_183:focus{ outline:#7e2e49 solid 1px;}
+.bugger_cont span{ top:12px;}
+#details, #oplata{ font-size:11px; margin:27px 3px 0 0; padding:2px 8px;}
+
+#search   { font-size:11px;}
+#search:focus{ outline:none;}
+
+.cat_nav>li:hover{ background-color:#fff;}
+.foot_tovs_cell h5, .foot_tovs_cell p{ font-size:13px;}
+.full_list { font-size:12px;}
+.img_wrap45{ border:1px solid #999;}
+
+.reg_inp  { padding:7px 16px 3px; }
+#pay_btn  { position:relative; top:2px;}

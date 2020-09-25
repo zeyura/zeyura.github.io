@@ -1,0 +1,485 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>АМИ item</title>
+<meta name="description" content="">
+<meta name="keywords"    content="">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+<!--<script src="http://code.jquery.com/jquery-latest.js"></script> -->
+<script type="text/javascript" src="js/jquery.min.1.8.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
+<link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+
+<!--[if lt IE 9]> 
+   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+<![endif]-->
+<!--[if lt IE 10]>
+    <script type="text/javascript" src="js/PIE.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            if (window.PIE) {
+                $('.rounded').each(function() {
+                    PIE.attach(this);
+                });
+            }
+        });
+    </script>
+    <![endif]-->
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="css/style_ie7.css" type="text/css">
+    <![endif]-->
+    <!--[if IE 8]>
+    <link rel="stylesheet" href="css/style_ie8.css" type="text/css">
+<![endif]-->
+</head>
+
+<body>
+<header>
+  <div class='black_w100'>
+    <div class='header_top pos_rel'>
+		  <div class='soz_wrapper left'>
+			  <a href='#' class='soz_btn' id='fb_a'></a>
+				<a href='#' class='soz_btn' id='tw_a'></a>
+				<a href='#' class='soz_btn' id='vk_a'></a>
+			</div>
+			<div class='telefon_wrapper left'>
+			  <small>+3 093</small> 153 90 90
+			</div>
+			<div class='acc_wrapper pos_abs'>
+			  <a href='#' class='sign_out' >Выйти</a>
+				<a href='#' class='btn red_btn' id='acc_btn'>Аккаунт</a>
+			</div>
+		</div>
+  </div>
+
+  <div class='header_main pos_rel'>
+	  <div class='logo_wrapper'>
+		 <a href='#' class='logo_a inl_block'><p class='logo'>АМИ</p></a>
+		 <p class='slogan'>Алмазные маникюрные инструменты</p>
+		</div>
+		<div class='bugger pos_abs'>
+		  <div class='bugger_cont right pos_rel'>
+			  <p>Левушкин Кирилл</p>
+				<span>Корзина:&nbsp;<i id='tov'>5</i>&nbsp;<b id='ttext'>товар</b></span>
+				<a href="#" class='btn white_btn' id='details'>Детали</a>
+				<a href="#" class='btn red_btn' id='oplata'>Оплатить</a>
+			</div>
+		</div>
+	</div>
+
+</header>
+
+<nav class='main_nav pos_rel'>
+ <ul class='main_nav_ul'>
+  <li id='home_li'><a href='#'></a></li>
+	<li><a href='#'>Каталог</a></li>
+  <li><a href='#'>Новости</a></li>
+  <li><a href='#'>Заточка</a></li>
+	<li><a href='#'>Где купить</a></li>
+	<li><a href='#'>Отзывы</a></li>
+	<li><a href='#'>Вакансии</a></li>
+	<li><a href='#'>Контакты</a></li>
+	<li id='right_li'>
+	</li>
+ </ul>
+ <form action="" method="get" name='search_form' id='search_form'>
+	<input type='text' name='search' class='inp_183' id='search' placeholder="Поиск...">
+	<button type="submit" id='search_submit'></button>
+ </form>
+</nav>
+
+<div class='front_slider_wrapper pos_rel'>
+  <div class='slider' id='front_slider'><img src="images/slider_front.jpeg" width="940" height="173" title='Слайдер'></div>
+	 
+  <a class='isl_arrow pos_abs' id='isl_arr_left'></a>
+	<a class='isl_arrow pos_abs' id='isl_arr_right'></a>
+</div>
+
+<div class='main_wrapper pos_rel clearfix'>
+
+  <div class='flower' id='flower_left_top'></div>
+	<div class='flower' id='flower_right_top'></div>
+	
+  <section class='left_section left pos_rel'>
+	 
+	  <div class='categories_wrapper shadow left_white rounded'>
+			<header>
+			  <h3 class='head_red'>Категории</h3>
+			</header>
+			<nav>
+			<ul class='cat_nav'>
+			  <li>Маникюрные наборы
+					<ul class='inner'>
+					  <li><a href='#'>Набор первый</a></li>
+						<li><a href='#'>Набор лучший</a></li>
+						<li><a href='#'>Набор десятый</a></li>
+					</ul>
+				</li>
+			  <li>Принадлежности для маникюра
+					<ul class='inner'>
+					  <li><a href='#'>Набор первый</a></li>
+						<li><a href='#'>Набор лучший</a></li>
+						<li><a href='#'>Набор десятый</a></li>
+					</ul>
+				</li>
+			  <li>Пилки для ногтей
+					<ul class='inner'>
+					  <li><a href='#'>Металлические</a></li>
+						<li><a href='#'>Лазерные</a></li>
+						<li><a href='#'>Стеклянные</a></li>
+						<li><a href='#'>Наждачные</a></li>
+						<li><a href='#'>Нейтронные</a></li>
+					</ul>
+				</li>
+				<li>Принадлежности для лица
+					<ul class='inner'>
+						<li><a href='#'>Стеклянные</a></li>
+						<li><a href='#'>Наждачные</a></li>
+						<li><a href='#'>Нейтронные</a></li>
+					</ul>
+				</li>
+				<li>Принадлежности для ресниц
+					<ul class='inner'>
+					  <li><a href='#'>Металлические</a></li>
+						<li><a href='#'>Лазерные</a></li>
+					</ul>
+				</li>
+				<li>Принадлежности для волос
+					<ul class='inner'>
+					  <li><a href='#'>Металлические</a></li>
+						<li><a href='#'>Лазерные</a></li>
+					</ul>
+				</li>
+				<li>Материал для наращивания ногтей
+					<ul class='inner'>
+					  <li><a href='#'>Металлические</a></li>
+						<li><a href='#'>Лазерные</a></li>
+					</ul>
+				</li>
+				<li class='last'>Принадлежности для педикюра
+					<ul class='inner'>
+					  <li><a href='#'>Металлические</a></li>
+						<li><a href='#'>Лазерные</a></li>
+					</ul>
+				</li>
+			</ul>
+			</nav>
+		</div><!-- categories_wrapper -->
+	</section>
+	
+  <section class='right_section right'><!-- Main Box -->
+		
+		<div class='main_content shadow right_white rounded pos_rel'>
+			<header>
+			  <h3 class='head_black'>Каталог</h3>
+			</header>
+			
+		  <div class='main_content_inner news_page'>
+			  <div class='bread_crumbs'><a href='#'>Главная</a> › <a href='#'>Каталог</a> › <a href='#'>Принадлежности</a> › <span>Набор Аскет</span></div>
+			  
+				<div class='item_top clearfix'>
+				  <div class='carusel left'>
+					  <div class='img_wrap250 stock'>
+							<div class='action_box'></div>
+							<img src="images/no_img_biger.png" width="250" height="230" alt="" title="" >
+						</div>
+					  <div class='manage clearfix'>
+						  <div class='carusel_arrows left'  id='carusel_left_arr'></div>
+							<div class='carusel_arrows right' id='carusel_right_arr'></div>
+							  <div class='carusel_pointers'>
+								  <ul>
+									  <li class='current'></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul>
+								</div>
+						</div>
+					</div>
+				
+				  <div class='item_top_text right'>
+					  <h3>Набор для лица “Asket”</h3>
+						<div class='pos_rel'>
+						  <span class='item_price'>400&nbsp;грн.</span>
+							<span class='item_act_price'>700&nbsp;грн.</span>
+								<div class='item_counter'>
+									<span class='minus'></span>
+									<input type="text" class='' value='1' />
+									<span class='plus'></span>
+									<a href='#' class='btn red_btn shad63' id='to_busket_btn'>В корзину</a>
+								</div>
+					  </div>
+					  <div class='item_description'>
+						  <div class='btn_wrap'>
+							  <a class='btn white_btn big_btn left active' id='descript_btn'>Описание товара</a>
+								<a class='btn white_btn big_btn right' id='charact_btn'>Характеристика</a>
+							</div>
+						  <div class='tabs'>
+							    <p>&nbsp;</p>
+							  <div class='tab_descript'>
+								  <div class='t1'>
+									  Режим ношения<br>
+										Режим замены<br>
+										Упаковка
+									</div>
+									<div class='t2'>
+									  Один день<br>
+										Ежедневно<br>
+										90 шт.
+									</div>
+								</div>
+							  <div class='tab_charact'>
+								  <div class='t1'>
+									  Режим ношения<br>
+										Режим замены
+									</div>
+									<div class='t2'>
+									  Один день<br>
+										Ежедневно
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+			  
+        <div class='item_action pos_rel'>
+				  <div class='act_present pos_abs'></div>
+				  <h3 class='pos_abs inl_block'>Акция! Фирменный аксессуар в подарок!</h3>
+					<div class='act_details pos_abs inl_block'>Подробности</div>
+					<div class='act_elem pos_abs'>
+					  <h5>Набор для лица “Asket”</h5>
+						<div class='price pos_abs'><b>400</b>&nbsp;грн.</div>
+						<img src='images/item_img1.jpg' />
+					</div>
+					<div class='act_elem pos_abs' id='acsess'>
+					  <h5>Пилки для ногтей</h5>
+						<div class='price pos_abs'><b>200</b>&nbsp;грн.</div>
+						<div class='old_price pos_abs' >200&nbsp;грн.</div>
+						<img src='images/item_img2.jpg' />
+					</div>
+					<div class='signs pos_abs' id='plus'></div>
+					<div class='signs pos_abs' id='equal'></div>
+					<div class='act_price pos_abs inl_block'><b>600</b>&nbsp;грн.</div>
+					<a href='#' class='btn red_btn shad63 pos_abs' id='buy_kit'>Купить комплект</a>
+					
+					<div class='popup pos_abs' id=''>
+					  <div class='ugol pos_abs' ></div>
+					  <h4>Акция! Фирменный аксессуар в подарок!</h4>
+					    <div>
+							  <img class='left' src='images/item_img22.jpg' />
+								<p>
+								Каждый покупатель акционных смартфонов и планшетов Samsung получает в подарок фирменный аксессуар! Период проведения акции: 4 февраля — 18 февраля 2012 г.
+								</p>
+								<h5 class='whus'>В акции участвуют:</h5>
+								
+								<div class='clearfix popup_bot'>
+								<img class='left' src='images/item_img3.jpg' />
+								<div>
+								  <h5>Комплект Razer</h5>
+									<span><b>300</b>&nbsp;грн.</span>
+								</div>
+								</div>
+								
+								<div class='clearfix popup_bot'>
+								<img class='left' src='images/item_img3.jpg' />
+								<div>
+								  <h5>Комплект Razer</h5>
+									<span><b>300</b>&nbsp;грн.</span>
+								</div>
+								</div>
+							</div>
+					</div>
+				</div>
+				
+				<div class='item_reviews pos_rel'>
+				  <div class='reviews_top pos_rel'>
+					  <span>Отзывы (<b>2</b>) </span>
+						<a href='#' class='btn red_btn shad63 pos_abs add_rev' id='add_rev'>Добавить Отзыв</a>
+					</div>
+				  
+					  <div class='reviews_cell'>
+					    <div class='reviews_cell_head'>
+							  Junior
+								<span class='reviews_date right'>12 февраля 2012</span>
+							</div>
+							<div class='reviews_cell_item'>
+							Долго выбирал между Iphone 4s и HTC sensation XL. Всегда был поклонником apple и остаюсь по сей день. 
+							НО, тот факт, что айфон у каждого второго немного напрягал, поэтому я все таки решился на покупку данного девайса.
+							</div>
+							<div class='pos_rel'>
+							  <a class='btn white_btn shad_de answer_btn' href=''>Ответить</a>
+							</div> 
+					  </div>
+				    
+						<div class='reviews_cell'>
+					    <div class='reviews_cell_head'>
+							  Junior
+								<span class='reviews_date right'>12 февраля 2012</span>
+							</div>
+							<div class='reviews_cell_item'>
+							Долго выбирал между Iphone 4s и HTC sensation XL. Всегда был поклонником apple и остаюсь по сей день. 
+							НО, тот факт, что айфон у каждого второго немного напрягал, поэтому я все таки решился на покупку данного девайса.
+							</div>
+							<div class='pos_rel'>
+							  <a class='btn white_btn shad_de answer_btn' href=''>Ответить</a> 
+							  <a href='#' class='btn red_btn shad63 pos_abs add_revs' id=''>Добавить Отзыв</a>
+							</div>
+					  </div>
+						
+						<form action="test.php" id='review_form' class='clearfix'>
+						  <h2>Написать отзыв</h2>
+						   <div class='reginp_wrapper pos_rel'>
+							 <label><strong>Имя</strong>
+					     <input type="text" name='name' class='reg_inp' id='review_name' required />
+						   </label><br>
+							 <label><strong>Email</strong>
+				       <input type="email" name='mail' class='reg_inp' id='review_mail' required />
+						   </label><br>
+							 <label><strong>Сообщение</strong>
+							 <textarea class='reg_text' name='text' id='review_text' required></textarea>
+							 </label>
+							 </div>
+						   <button type="submit" class='btn red_btn shad63 right' id='review_submit'>Отправить</button>
+						</form>
+						
+				</div>
+				
+				<h2 class='similar_items pos_rel'>Похожие товары</h2>
+				
+				<div class='similar_items_wrap pos_rel'>
+				
+					<div class='similar_items_wrap_cell'>
+						<div class='img_wrap100 discount'>
+							<div class='action_box'></div>
+							<img src="images/no_img.png" width="100" height="90" alt="" title="" >
+						</div>
+						<div class='text pos_rel clearfix'>
+							<h5>Пилки для ногтей</h5>
+							<p><b>200</b> грн</p>
+							<a href='#' class='btn red_btn shad63 pos_abs'>Купить</a>
+						</div>
+					</div>
+				
+				  <div class='similar_items_wrap_cell'>
+						<div class='img_wrap100 discount'>
+							<div class='action_box'></div>
+							<img src="images/no_img.png" width="100" height="90" alt="" title="" >
+						</div>
+						<div class='text pos_rel clearfix'>
+							<h5>Пилки для больших ногтей</h5>
+							<p><b>111</b> грн</p>
+							<a href='#' class='btn red_btn shad63 pos_abs'>Купить</a>
+						</div>
+					</div>
+				  
+					<div class='similar_items_wrap_cell'>
+						<div class='img_wrap100 discount'>
+							<div class='action_box'></div>
+							<img src="images/no_img.png" width="100" height="90" alt="" title="" >
+						</div>
+						<div class='text pos_rel clearfix'>
+							<h5>Пилки для ногтей</h5>
+							<p><b>200</b> грн</p>
+							<a href='#' class='btn red_btn shad63 pos_abs'>Купить</a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+	</section>
+</div>
+
+<script>
+		
+		$('.act_details').click(function(e) {
+			  $('.popup').toggleClass('open');
+		});
+		
+		$('.big_btn').click(function(e) {
+			  if( !$(this).hasClass('active') ) {
+					$(this).siblings('.big_btn').removeClass('active');
+					$(this).addClass('active');
+					$('.tabs>div').hide();
+					if( $(this).hasClass('left') ) {
+						$('.tab_descript').show();
+					}
+					else{  
+					  $('.tab_charact').show();
+					}
+				}
+		});
+		
+		$('.item_counter .minus').click( function(e) {
+				var i = $(this).siblings('input');
+				if( +i.val() > 1 ) {
+					var c = +i.val(); 
+					i.val( c - 1 );
+				}
+		});
+		
+		$('.item_counter .plus').click( function(e) {
+				  var i = $(this).siblings('input');
+					var c = +i.val(); 
+					i.val( c + 1 );
+		});
+		
+</script>
+
+<footer class='main_footer shadow rounded pos_rel'>
+	<div class='foot_top_black pos_rel'></div>
+  <div class='foot_left_box pos_abs'>
+	  <p class='copyright pos_abs'>Copyright 2012. ami.in.ua</p>
+	</div>
+  <div class='foot_right_box pos_abs'>
+	  <section>
+		  <h4>Где купить?</h4>
+			<ul class='foot_list'>
+				<li>ТВК «Глобус»</li>
+				<li>ТЦ «Метроград»</li>
+				<li>ТЦ «Навигатор»</li>
+				<li>ТРЦ «Променада Центр»</li>
+				<li>ТЦ «Олимпийский»</li>
+				<li>ТРЦ «Dream Town»</li>
+			</ul>
+			<a href="#" class='full_list pos_abs'>Полный список>></a>
+		</section>
+	  <section>
+		  <h4>Случайные товары</h4>
+				<div class='foot_tovs_cell clearfix'>
+				  <div class='img_wrap45 left rounded'><a href='#'><img src="images/img5.jpeg" width="45" height="45" alt="" title=""></a></div>
+				  <h6><a href='#'>Принадлежности для лица</a></h6>
+					<p>300 грн.</p>
+				</div>
+				<div class='foot_tovs_cell clearfix'>
+				  <div class='img_wrap45 left rounded'><a href='#'><img src="images/img5.jpeg" width="45" height="45" alt="" title=""></a></div>
+				  <h6><a href='#'>Принадлежности для сухого лица</a></h6>
+					<p>200 грн.</p>
+				</div>
+				<div class='foot_tovs_cell clearfix'>
+				  <div class='img_wrap45 left rounded'><a href='#'><img src="images/img5.jpeg" width="45" height="45" alt="" title=""></a></div>
+				  <h6><a href='#'>Принадлежности..</a></h6>
+					<p>300 грн.</p>
+				</div>
+		</section>
+		<section class='foot_contacts'>
+		  <h4>Наши Контакты</h4>
+		  <p><span>Телефон :</span><br> &nbsp;&nbsp;(063) 816 53 20<br>  &nbsp;&nbsp;(067) 604 42 52</p>
+			<p><span>Email :</span><br> &nbsp;&nbsp;info@eyes.net.ua</p>
+			<div class='foot_auch pos_abs'>Также вы сможете связаться с нами через <a href='#'>контактную форму</a></div>
+		</section>
+	
+	</div>
+</footer>
+
+<div class='consult off'><a href="#"></a></div>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+
+.main-header { border-bottom:1px solid #aaa;}
+#search-inp{ padding:8px 40px 4px 10px; height:19px;}
+.product-box, .box-variant-cell{ outline:1px solid #f3f3f3;}
+.checkout-sel  { margin-bottom:10px;}
+.req-fields    { margin-bottom:10px;}
+.set-img-line a{ }
+.set-img-line a[class~='last']{ margin-right:0;}

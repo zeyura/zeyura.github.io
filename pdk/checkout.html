@@ -1,0 +1,558 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PDK checkout</title>
+<meta name="description" content="">
+<meta name="keywords"    content="">
+
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+<script type="text/javascript" src="js/jquery.min.1.8.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
+<script type="text/javascript" src="js/cusel.js"></script>
+<link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+
+<!--[if lt IE 9]> 
+   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+<![endif]-->
+<!--[if lt IE 10]>
+    <script type="text/javascript" src="js/PIE.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            if (window.PIE) {
+                $('.pie').each(function() {
+                    PIE.attach(this);
+                });
+            }
+        });
+    </script>
+    <![endif]-->
+    <!--[if IE 9]>
+    <link rel="stylesheet" href="css/style_ie9.css" type="text/css">
+    <![endif]-->
+    <!--[if IE 8]>
+    <link rel="stylesheet" href="css/style_ie8.css" type="text/css">
+<![endif]-->
+</head>
+
+<body>
+
+<header class='main-header'>
+  <div class='main-header-inner'>
+	
+			<div class='cart-wrapper right pos-rel pie'>
+				<div class='main-header-cart pos-rel pie'>
+				  <div class='cart-div'>
+							<p>
+								В корзине <span class='cart-quantity-item'>4 товара</span> <br> соимостью <span class='cart-cost'>6900,50 грн.</span>
+							</p>
+							<a href='cart.html' class='btn btn-grey90 pos-abs'>Просмотр</a>
+							<a href='checkout.html' class='btn btn-blue90 pos-abs'>Оформление</a>
+					</div>
+					<div class='bookmarks-div'>
+					    <p>Закладки..</p>
+					</div>
+				</div>
+				<div class='busket-tab pos-abs active'>Корзина</div>
+				<div class='bookmarks-tab pos-abs'>Закладки</div>
+			</div>
+			
+	  <a href='index.html'><div class='logo i-block'>ПинскДрев - искусство создавать уют!</div></a>
+	  <div class='main-header-text i-block'>
+		  <h1>Официальный дистрибьютор в Украине!</h1>
+		  <a href='text.html' class='a-recall'>Перезвонить?</a>
+			<a href='text.html' class='a-question'>Задать вопрос</a>
+			<a href='text.html' class='a-consult'>Личный консультант</a>
+		</div>
+	  <div class='main-header-fones i-block'>
+		  <span>095 123 45 99</span>
+		  <span>098 777 47 97</span>
+			<span>099 123 15 88</span>
+		</div>
+		
+	</div> 
+</header>
+
+<div class='main-nav-wrapper pos-rel'>
+  <nav class='i-block'>
+	  <ul class='main-nav pie'>
+		  <li><a href='category.html' id='catalog-link'>Каталог мебели</a><span class='arr-down'></span></li>
+			<li><a href='text.html'>Акции (3)</a></li>
+			<li><a href='text.html'>Доставка и оплата</a></li>
+		  <li><a href='text.html'>О кредите</a></li>
+			<li><a href='text.html'>Компания</a></li>
+			<li class='last'><a href='text.html'>Советы и статьи</a></li>
+		</ul>
+	</nav>
+  <form action="test.php" method="get" name='search-form' id='search-form'>
+	  <input type='text' name='search' class='input' id='search-inp' placeholder="Быстрый поиск">
+	  <button type="submit" class='btn pos-abs' id='search-submit'></button>
+  </form>
+ <div class='main-nav-catalog i-block pos-abs pie'>
+   <div class='main-nav-cell'>
+	   <h1>Мягкая мебель</h1>
+	   <ul>
+		   <li><a href='set.html' class='active'>Наборы мягкой мебели</a><sup>(9)</sup></li>
+		   <li><a href='category-set.html'>Кожаные диваны</a><sup>(5)</sup></li>
+			 <li><a href='category-set.html'>Угловые диваны</a><sup>(3)</sup></li>
+			 <li><a href='category-set.html'>Тканевые диваны</a><sup>(2)</sup></li>
+			 <li><a href='category-set.html'>Механизмы трансформации</a><sup>(3)</sup></li>
+		 </ul>
+	 </div>
+	 <div class='main-nav-cell'>
+	   <h1>Корпусная мебель</h1>
+	   <ul>
+		   <li><a href='set.html' class='active'>Программы мебели</a><sup>(9)</sup></li>
+		   <li><a href='category.html'>Мебель для спальни</a><sup>(5)</sup></li>
+			 <li><a href='category.html'>Мебель для гостиной</a><sup>(3)</sup></li>
+			 <li><a href='category.html'>Мебель для кабинета</a><sup>(2)</sup></li>
+			 <li><a href='category.html'>Столы</a><sup>(3)</sup></li>
+			 <li><a href='category.html'>Стулья</a><sup>(2)</sup></li>
+		 </ul>
+	 </div>
+	 <div class='main-nav-cell'>
+	   <h1>Матрасы</h1>
+	   <ul>
+		   <li><a href='category.html'>Матрасы из полиуретана</a><sup>(9)</sup></li>
+		   <li><a href='category.html'>Матрасы из латекса</a><sup>(5)</sup></li>
+			 <li><a href='category.html'>Пружинные матрасы</a><sup>(3)</sup></li>
+			 <li><a href='category.html'>Реечные днища</a><sup>(2)</sup></li>
+		 </ul>
+	 </div>
+	 <div class='main-nav-cell'>
+	   <h1>Освещение</h1>
+	   <ul>
+		   <li><a href='category.html'>Настольные лампы</a><sup>(9)</sup></li>
+		   <li><a href='category.html'>Потолочное освещение</a><sup>(5)</sup></li>
+			 <li><a href='category.html'>Абажуры и основания</a><sup>(3)</sup></li>
+			 <li><a href='category.html'>Торшеры</a><sup>(2)</sup></li>
+		 </ul>
+	 </div>
+	 
+ </div>
+</div>   
+
+<div class='main-content pie'>
+  <div class='bread-crumbs'>
+	  <a href='category.html'>Каталог мебели</a> &raquo;
+		<a href='cart.html'>Корзина</a> &raquo;
+		Оформление заказа
+	</div>
+  
+	<section class='text-section checkout clearfix'>
+	  <h1>Оформление заказа</h1>
+		
+		<div class='content-bord clearfix'>
+		  <div class='btn-wrap left i-block'>
+			  <a href='item.html' class='btn more-btn'>Вернуться</a>&nbsp;&nbsp;к покупкам
+			</div>
+		  <div class='btn-wrap right i-block'>закончить и&nbsp;&nbsp;
+			  <a href='index.html' class='btn buy-right-btn'>Купить</a>
+			</div>
+		</div>
+		
+		<div class='checkout-content clearfix'>
+		  <div class='checkout-forms-wrap left'>
+			  <form action='test.php' name='checkout-props-form' id='checkout-props-form'>
+				  <h2>Реквизиты получателя</h2>
+				  <div class='checkout-forms-inner'>
+					  <span class='req-fields'><em>* </em>&mdash; обязательные поля</span>
+						<label class='cf-inp-label'>
+						  Как обращаться к получателю мебели? <em>*</em> 
+						  <input type='text' name='name' class='checkout-inp' id='checkout-name-inp' placeholder='Имя получателя'>
+						</label>
+						<label class='cf-inp-label'>
+						  Куда звонить, если что? <em>*</em> 
+						  <input type='tel' name='tel' class='checkout-inp' id='checkout-tel-inp' placeholder='Телефон получателя'>
+						</label>
+						<label class='cf-inp-label'>
+						  Хотим Вашу почту знать. <em>*</em> 
+						  <input type='email' name='email' class='checkout-inp' id='checkout-email-inp' placeholder='Эл. почта получателя'>
+						</label>
+						<p class='cform-p'>
+						Можете не заполнять <br>
+						<a href='text.html' class='delive-address'>Адрес доставки</a>
+						</p>
+					</div>
+				</form>
+			  
+				<form action='test.php' name='checkout-paymetod-form' id='checkout-paymetod-form'>
+				  <h2>Выбор метода оплаты и доставки</h2>
+				  <div class='checkout-forms-inner'>
+					  <span class='req-fields'><em>* </em>&mdash; обязательные поля</span>
+						<label class='cf-inp-label'>Выбрано правильно <em>*</em></label>
+						<select class='checkout-sel cusel' id='checkout-delive-sel'>
+						  <option value='1' selected>Самовывоз</option>
+							<option value=''>Самовыплыв</option>
+							<option value=''>Самовылет</option>
+						</select>
+						<label class='cf-inp-label clearfix'>Определитесь <em>*</em> 
+						  <a href='text.html' class='delive-address i-block right'>Распечатать счет-фактуру</a>
+						</label>
+						<select class='checkout-sel cusel' id='checkout-paymetod-sel'>
+						  <option value='1' selected>Наличными</option>
+							<option value=''>Безналом</option>
+							<option value=''>Web-money</option>
+							<option value=''>Веб-рубли</option>
+						</select>
+						<label class='cf-inp-label'>Есть что-то недосказанное?
+						  <textarea name='comment' class='checkout-textarea' id='checkout-comment-ta' placeholder='Введите ваш комментарий'></textarea>
+						</label>
+					</div>
+				</form>
+			</div>
+
+		  <div class='checkout-product-wrap right'>
+			  <h4>Товары, которые вы выбрали</h4>
+			  
+				<div class='checkout-cell'>
+				  <div class='close-this'></div>
+				  <h6>Спальня “Снипет”</h6>
+				  <div class='cc-top clearfix'>
+					  <div class='cc-top-left left clearfix'>
+						  <img src="img/img1.jpg" class='cc-img-140 left' alt='' />
+							<div class='cc-top-text'>
+							   <div class='counter prod-count'>
+								   <input type='text' class='count-inp' value="1" >
+									 <div class='counter-arr-up'></div>
+									 <div class='counter-arr-down'></div>
+								 </div>&nbsp;&nbsp;шт.
+								 <div class='desc'>
+							     <span class='cc-set'>Набор “Снипет”</span> <br>
+								   <span class='cc-sale'>Акция</span>
+								   <span class='cc-new'>Новинка</span>
+								 </div>
+							</div>
+						</div>
+						<div class='cc-top-right right'>
+						  <div class='cc-price'>
+							  <em class='old-price'>5678,22 грн.</em>
+								<em class='cur-price'>5678,45 грн.</em>
+							</div>
+							<div class='cc-credits'>
+							  В <a href='text.html'>кредит</a> на
+							  <div class='counter counter-credit'>
+								   <input type='text' class='count-inp' value="10" >
+									 <div class='counter-arr-up'></div>
+									 <div class='counter-arr-down'></div>
+								</div>мес.
+								<div class='cc-credit-price'>
+								  <em>578,23</em><br>грн./мес.
+								</div>
+							</div>
+							<div class='cc-econom right'>
+							  Экономия 400 грн.
+							</div>
+						</div>
+					</div>
+				  <div class='cc-addition'>
+					  <p>
+					  <span>Обивка:</span>
+					  <select class='cc-addition-sel cusel h-24' id=''>
+						  <option value='1' selected>Кожа</option>
+							<option value=''>Мех</option>
+							<option value=''>Брезент</option>
+							<option value=''>Еще что-то</option>
+						</select>
+						</p>
+						<p>
+					  <span>Отбив:</span>
+					  <select class='cc-addition-sel cusel h-24' id=''>
+						  <option value='1' selected>Кожа1</option>
+							<option value=''>Мех</option>
+							<option value=''>Брезент</option>
+							<option value=''>Еще что-то</option>
+							<option value=''>Мех</option>
+							<option value=''>Брезент</option>
+							<option value=''>Еще что-то</option>
+							<option value=''>Мех</option>
+							<option value=''>Брезент</option>
+							<option value=''>Еще что-то</option>
+						</select>
+						</p>
+					</div>
+				</div>
+				
+				<div class='checkout-cell'>
+				  <div class='close-this'></div>
+				  <h6>Спальня “Снипет”</h6>
+				  <div class='cc-top clearfix'>
+					  <div class='cc-top-left left clearfix'>
+						  <img src="img/img1.jpg" class='cc-img-140 left' alt='' />
+							<div class='cc-top-text'>
+							   <div class='counter prod-count'>
+								   <input type='text' class='count-inp' value="1" >
+									 <div class='counter-arr-up'></div>
+									 <div class='counter-arr-down'></div>
+								 </div>&nbsp;&nbsp;шт.
+								 <div class='desc'>
+							     <span class='cc-set'>Набор “Снипет”</span> <br>
+								   <span class='cc-sale'>Акция</span>
+								   <span class='cc-new'>Новинка</span>
+								 </div>
+							</div>
+						</div>
+						<div class='cc-top-right right'>
+						  <div class='cc-price'>
+							  <em class='old-price'>5678,22 грн.</em>
+								<em class='cur-price'>5678,45 грн.</em>
+							</div>
+							<div class='cc-credits'>
+							  В <a href='text.html'>кредит</a> на
+							  <div class='counter counter-credit'>
+								   <input type='text' class='count-inp' value="10" >
+									 <div class='counter-arr-up'></div>
+									 <div class='counter-arr-down'></div>
+								</div>мес.
+								<div class='cc-credit-price'>
+								  <em>578,23</em><br>грн./мес.
+								</div>
+							</div>
+							<div class='cc-econom right'>
+							  Экономия 400 грн.
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class='checkout-cell'>
+				  <div class='close-this'></div>
+				  <h6>Спальня “Снипет”</h6>
+				  <div class='cc-top clearfix'>
+					  <div class='cc-top-left left clearfix'>
+						  <img src="img/img1.jpg" class='cc-img-140 left' alt='' />
+							<div class='cc-top-text'>
+							   <div class='counter prod-count'>
+								   <input type='text' class='count-inp' value="2" >
+									 <div class='counter-arr-up'></div>
+									 <div class='counter-arr-down'></div>
+								 </div>&nbsp;&nbsp;шт.
+							</div>
+						</div>
+						<div class='cc-top-right right'>
+						  <div class='cc-price'>
+							  <em class='old-price'>5678,22 грн.</em>
+								<em class='cur-price'>3678,45 грн.</em>
+							</div>
+							<div class='cc-credits'>
+							  В <a href='text.html'>кредит</a> на
+							  <div class='counter counter-credit'>
+								   <input type='text' class='count-inp' value="12" >
+									 <div class='counter-arr-up'></div>
+									 <div class='counter-arr-down'></div>
+								</div>мес.
+								<div class='cc-credit-price'>
+								  <em>578,23</em><br>грн./мес.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class='checkout-cell'>
+				  <div class='close-this'></div>
+				  <h6>Спальня “Снипет”</h6>
+				  <div class='cc-top clearfix'>
+					  <div class='cc-top-left left clearfix'>
+						  <img src="img/img1.jpg" class='cc-img-140 left' alt='' />
+							<div class='cc-top-text'>
+							   <div class='counter prod-count'>
+								   <input type='text' class='count-inp' value="2" >
+									 <div class='counter-arr-up'></div>
+									 <div class='counter-arr-down'></div>
+								 </div>&nbsp;&nbsp;шт.
+							</div>
+						</div>
+						<div class='cc-top-right right'>
+						  <div class='cc-price'>
+							  <em class='old-price'>5678,22 грн.</em>
+								<em class='cur-price'>3678,45 грн.</em>
+							</div>
+							<div class='cc-credits'>
+							  В <a href='text.html'>кредит</a> на
+							  <div class='counter counter-credit'>
+								   <input type='text' class='count-inp' value="12" >
+									 <div class='counter-arr-up'></div>
+									 <div class='counter-arr-down'></div>
+								</div>мес.
+								<div class='cc-credit-price'>
+								  <em>578,23</em><br>грн./мес.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class='content-bord clearfix'>
+				  <div class='clear-busket left'>
+					  <a href='index.html'>Очистить корзину</a>
+					</div>
+				  <div class='checkout-summ right'>
+					  Итого: <b> 17839,25 грн.</b>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class='content-bord clearfix'>
+		  <div class='btn-wrap left i-block'>
+			  <a href='item.html' class='btn more-btn'>Вернуться</a>&nbsp;&nbsp;к покупкам
+			</div>
+		  <div class='btn-wrap right i-block'>закончить и&nbsp;&nbsp;
+			  <a href='text.html' class='btn buy-right-btn'>Купить</a>
+			</div>
+		</div>
+		
+		<div class='info-line'>
+		  <h1>Информация</h1>
+			<ul class='inl-list'>
+			  <li class='inl-garant'><a href='text.html'>Гарантийное обсуживание</a></li>
+				<li class='inl-discount'><a href='text.html'>Дисконтная программа</a></li>
+				<li class='inl-delive'><a href='text.html'>Доставка</a></li>
+				<li class='inl-install'><a href='text.html'>Монтаж</a></li>
+				<li class='inl-credit'><a href='text.html'>Кредит</a></li>
+				<li class='inl-consult'><a href='text.html'>Личный консультант</a></li>
+			</ul>
+		</div>
+		
+	</section>	
+
+  <section class='about-section'>
+	  <h1>О магазине</h1>
+		<p>
+		 Резание древесины выполняется различными методами: пилением, фрезерованием, строганием, сверлением, долблением, точением, лущением и шлифованием. Стружка может быть либо отходом производства, либо продукцией (например, шпон при лущении и строгании, тонкая дощечка при безопилочном резании). Бесстружечное резание происходит при раскалывании (дровокольный станок либо дровоколы), разрезании шпона (ножницы), вырезании штампами (шпонопочиночные станки), дроблении (дробильные и рубительные станки). Ленточная установка предназначена для продольной распиловки круглого леса на доску, шпалу, брус, шпон. Они делятся на два больших класса. Лесопильные рамы общего назначения. Производятся для установки в специальных лесопильных цехах. Такие рамы оборудованы четырёхвальцовым механизмом подачи. Лесопильные установки делят на первый и второй род.
+		</p>
+		<p>
+		 Рамы специального назначения: горизонтальные рамы — перемещение пильной рамки происходит в горизонтальном направлении (подходят для распила брёвен ценных пород и для выпиливания ванчесов в фанерном производстве); коротышевые рамы — более надёжное закрепление бревна (благодаря восьмивальцовому механизму подачи); тарные рамы — используются в производстве тарных досок (незначительное количество отходов); передвижные рамы — подходят для временных цехов (возможна транспортировка без демонтажа).
+		</p>
+	</section>
+</div>
+
+<footer class='main-footer pie'>
+   <section class='mf-left-section i-block'>
+	   <h1>Оптовым клиентам</h1>
+		 <form action='test.php' name='enter-form' id='enter-form'>
+		   <input type='email' name='email' class='enter-input' id='email-inp' placeholder="Электронная почта">
+		   <input type='password' name='pass' class='enter-input' id='password-inp' placeholder="Пароль">
+			 <button type="submit" class='btn enter-btn' id='enter-submit'>Вход в кабинет</button>
+			 <a href='text.html' class='reg-link' >Регистрация</a>
+			 <p>
+			 Ознакомтесь с условиями сотрудничества и проверьте соответствие требованиям.
+			 </p>
+			 <p class='copyright'>
+			 © Все права принадлежат ООО Пинскдрев
+			 </p>
+		 </form>
+		 <div class='contacts-div i-block'>
+		   <ul class='cont-list'>
+			   <li><a href='text.html'>Контакты склада</a></li>
+			   <li><a href='text.html'>Условия сотрудничества</a></li>
+				 <li><a href='text.html'>Принципы работы</a></li>
+				 <li><a href='text.html'>Оптовые акции</a></li>
+				 <li><a href='text.html'>Время работы</a></li>
+				 <li><a href='text.html'>Рекомендации по заказам</a></li>
+			 </ul>
+		   <address class='footer-address clearfix'>
+			   <h5>Центральный офис:</h5>
+				   <a href='text.html'><img src="img/map.jpg" class='left' alt='' title="" /></a>
+					 <div class='address-text'>
+					   <p>
+						   <span>+38 044 333 54 44</span><br>
+							 г. Киев, пр. Какой-то 66, оф. 7
+						 </p>
+					 </div>
+			 </address>
+		 </div>
+	 </section>
+	 
+	 <section class='mf-right-section i-block'>
+     <ul class='mf-catalog-ul i-block'>
+		   <li ><a href='category.html'>Мягкая мебель</a><span></span>
+
+				  <ul class='main-nav-cell' id='c1'>
+					  <li><a href='set.html' class='active'>Наборы мягкой мебели</a><sup>(9)</sup></li>
+					  <li><a href='set.html'>Кожаные диваны</a><sup>(5)</sup></li>
+						<li><a href='set.html'>Угловые диваны</a><sup>(3)</sup></li>
+						<li><a href='set.html'>Тканевые диваны</a><sup>(2)</sup></li>
+					  <li><a href='set.html'>Механизмы трансформации</a><sup>(3)</sup></li>
+					</ul>
+
+			 </li>
+			 <li ><a href='category.html'>Корпусная мебель</a><span></span>
+		     <ul class='main-nav-cell' id='c2'>
+		       <li><a href='set.html' class='active'>Программы мебели</a><sup>(9)</sup></li>
+		       <li><a href='set.html'>Мебель для спальни</a><sup>(5)</sup></li>
+			     <li><a href='set.html'>Мебель для гостиной</a><sup>(3)</sup></li>
+			     <li><a href='set.html'>Мебель для кабинета</a><sup>(2)</sup></li>
+			     <li><a href='set.html'>Столы</a><sup>(3)</sup></li>
+			     <li><a href='set.html'>Стулья</a><sup>(2)</sup></li>
+		     </ul>
+			 </li>
+			 <li ><a href='category.html'>Матрасы</a><span></span>
+			   <ul class='main-nav-cell' id='c3'>
+		       <li><a href='set.html'>Матрасы из полиуретана</a><sup>(9)</sup></li>
+		       <li><a href='set.html'>Матрасы из латекса</a><sup>(5)</sup></li>
+			     <li><a href='set.html'>Пружинные матрасы</a><sup>(3)</sup></li>
+			     <li><a href='set.html'>Реечные днища</a><sup>(2)</sup></li>
+		     </ul>
+			 </li>
+			 <li class='last'><a href='category.html'>Освещение</a><span></span>
+			   <ul class='main-nav-cell' id='c4'>
+		       <li><a href='set.html'>Настольные лампы</a><sup>(9)</sup></li>
+		       <li><a href='set.html'>Потолочное освещение</a><sup>(5)</sup></li>
+			     <li><a href='set.html'>Абажуры и основания</a><sup>(3)</sup></li>
+			     <li><a href='set.html'>Торшеры</a><sup>(2)</sup></li>
+		     </ul>
+			 </li>
+		 </ul>
+		 
+		 <div class='mf-right-3ul'>
+			 <ul class='mfr-list1 i-block'>
+			   <li ><a href='text.html'>Доставка</a></li>
+			   <li ><a href='text.html'>Оплата</a></li>
+			   <li ><a href='text.html'>Магазины</a></li>
+			   <li ><a href='text.html'>Кредит</a></li>
+				 <li ><a href='text.html'>Гарантии</a></li>
+			 </ul>
+			 
+			 <ul class='mfr-list2 i-block'>
+			   <li ><a href='text.html'>Советы</a>
+				    <ul>
+						 <li ><a href='text.html'>по уходу</a></li>
+						 <li ><a href='text.html'>по сборке</a></li>
+						 <li ><a href='text.html'>по выбору</a></li>
+						 <li ><a href='text.html'>по дизайну</a></li>
+						 <li ><a href='text.html'>остальные</a></li>
+					  </ul> 
+					</li>
+			 </ul>	 
+				 
+			 <ul class='mfr-list3 i-block'>
+			   <li ><a href='text.html'>Компания</a>
+				    <ul>
+						 <li ><a href='text.html'>История</a></li>
+						 <li ><a href='text.html'>Материалы</a></li>
+						 <li ><a href='text.html'>Производство</a></li>
+						 <li ><a href='text.html'>Качество</a></li>
+						 <li ><a href='text.html'>Остальные 9</a></li>
+					  </ul> 
+					</li>
+			 </ul>
+		 </div>
+		 <div class='web-point'>
+		   <a href='http://webpoint.net.ua' target="_blank">Разработка и продвижение — WebPoint</a>
+		 </div>
+	 </section>
+</footer>
+
+<script>
+  setPlaceholder( $('#checkout-name-inp'), 'Имя получателя');
+	setPlaceholder( $('#checkout-tel-inp'), 'Телефон получателя');
+	setPlaceholder( $('#checkout-email-inp'), 'Эл. почта получателя');
+	setPlaceholder( $('#checkout-comment-ta'), 'Введите ваш комментарий');
+</script>
+
+</body>
+</html>

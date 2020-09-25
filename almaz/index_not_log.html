@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>АМИ индекс</title>
+<meta name="description" content="">
+<meta name="keywords"    content="">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+<!--<script src="http://code.jquery.com/jquery-latest.js"></script> -->
+<script type="text/javascript" src="js/jquery.min.1.8.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
+<link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+
+<!--[if lt IE 10]>
+    <script type="text/javascript" src="js/PIE.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            if (window.PIE) {
+                $('.rounded').each(function() {
+                    PIE.attach(this);
+                });
+            }
+        });
+    </script>
+    <![endif]-->
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="css/style_ie7.css" type="text/css">
+    <![endif]-->
+    <!--[if IE 8]>
+    <link rel="stylesheet" href="css/style_ie8.css" type="text/css">
+<![endif]-->
+</head>
+
+<body>
+<header>
+  <div class='black_w100'>
+    <div class='header_top pos_rel'>
+		  <div class='soz_wrapper left'>
+			  <a href='#' class='soz_btn' id='fb_a'></a>
+				<a href='#' class='soz_btn' id='tw_a'></a>
+				<a href='#' class='soz_btn' id='vk_a'></a>
+			</div>
+			<div class='telefon_wrapper left'>
+			  <small>+3 093</small> 153 90 90
+			</div>
+			<div class='acc_wrapper pos_abs'>
+			  <a href='#' class='rega' >Регистрация</a>
+				<a href='#' class='btn red_btn' id='login_btn'>Войти</a>
+			</div>
+			<form action="" name='' id='login_form' class='pos_abs'>
+			  <input type="text" name='login' id='login' class='inp_183' maxlength="25" placeholder="Логин">
+			  <input type='password' name='pass' id='pass' class='inp_183' maxlength="25" placeholder="Пароль">
+				<button type="submit" class='btn black_btn' id='enter_btn'>Вход</button>
+				<a class='white pos_abs' id='forg_pass' href="#">Забыли пароль?</a>
+			</form>
+		</div>
+  </div>
+
+  <div class='header_main'>
+	  <div class='logo_wrapper'>
+		 <a href='#' class='logo_a inl_block'><p class='logo'>АМИ</p></a>
+		 <p class='slogan'>Алмазные маникюрные инструменты</p>
+		</div>
+	</div>
+
+ <script>
+ $(function () {
+	 
+  $('#login_btn').click(function(e) {
+		stopPropagation(e);
+		$('#login_form').css('display', 'block');
+	});
+
+  $('#login_form').click(function(e) {
+		stopPropagation(e);
+	});
+
+  $(document).click(function(e) {
+		$('#login_form').css('display', 'none');
+	});
+
+	setPlaceholder ( $('#login'), 'Логин');
+	setPlaceholder ( $('#pass'), 'Пароль');
+	 
+ });
+ </script>	 
+</header>
+
+<div class=''>
+  
+
+
+</div>
+</body>
+</html>

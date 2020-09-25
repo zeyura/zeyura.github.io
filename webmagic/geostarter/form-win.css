@@ -1,0 +1,196 @@
+.form-wrapper{
+	position:absolute;
+	font:11px Arial, sans-serif;
+	border: 5px solid #CCF; border-radius:5px;
+	background:#fff;
+	padding:10px 20px;
+	z-index: 1000;
+	-moz-box-shadow: 3px 3px 6px #333;
+    -webkit-box-shadow: 3px 3px 6px #333;
+    box-shadow: 3px 3px 6px #333;
+	behavior: url(PIE.htc);
+}
+.form-wrapper h2{
+	font: 20px/1.5 Arial, sans-serif;
+	font-weight:bold;
+	color:#ccf;
+	letter-spacing:1px;
+}
+.form-wrapper input[type="text"],input[type="password"]{
+    border:#ccc inset 1px; border-radius:2px;
+	background:#f6f6ff url(img/text-fon.png) -1px -1px no-repeat;
+	letter-spacing:1px;
+	font-weight:bold;
+}
+.form-wrapper .text:focus{
+	outline:none;
+	border:#09f solid 1px;
+}
+.form-wrapper #close{
+	position:absolute;
+	top:0;right:0; padding:0;
+	background:url(img/in_krest_min.png) center center;
+	height:20px; width:20px;
+	opacity:0.3;
+	filter:alpha(opacity=30);
+	-webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease;
+}
+.form-wrapper #close:hover{
+	cursor:pointer;
+	opacity:0.8;
+    filter:alpha(opacity=80);
+}
+.form-wrapper input[type="submit"]{
+	font-family:Arial, Helvetica, sans-serif;
+	text-shadow:0px 1px 1px #fff;
+	height:30px; width:150px;
+	border:#ccc solid 1px; 
+	border-radius:3px;
+	background:#eee; color:#333;
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#eee), to(#dde));
+	cursor:pointer;
+	font-size:12px;
+}
+.form-wrapper input[type="submit"]:hover{
+	-moz-box-shadow: 3px 3px 6px #999;
+    -webkit-box-shadow: 3px 3px 6px #999;
+    box-shadow: 3px 3px 6px #999;
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#dde));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+}
+#black-box {
+	  opacity:.6;filter:alpha(opacity=60);
+	  display:none;
+	  background:#333;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+}
+
+#in-window{
+	position:fixed;
+	top: 0; bottom: 0; right: 0; left: 0; margin: auto;
+    height: 230px; width: 330px;
+}
+#in-window .text{
+	height:20px; width:320px;
+    text-shadow:1px 1px 1px #bbc;
+	padding:5px;
+	font-size:16px;
+}
+#in-window #pass-in.invalid:focus{
+	background:#fdd url(img/text-fon.png) no-repeat;
+}
+#in-window div{
+	position:relative;
+	padding-top:8px;
+	padding-bottom:2px;
+}
+#in-window p{
+	position:absolute;
+	top:33px; right:10px;
+	color:#999;
+}
+#in-window span{
+	color:blue;
+	position:absolute;
+	right:0px;
+}
+#in-window span:hover{
+	text-decoration:underline;
+	cursor:pointer;
+}
+#in-window input[type="checkbox"]{
+	position:relative;
+	left:-3px;
+}
+#in-window label{
+	font-size:12px;
+	position:relative;
+	top:-1px;
+}
+#in-window #reg{
+    top:-14px; font-size:12px
+}
+
+#reg-window{
+	top:0; left:0; right:0;
+	margin: auto; margin-top:20px;
+	display:none;
+    width: 320px;
+	padding:10px 30px;
+}
+#reg-window input, select{
+	margin-bottom:8px;
+}
+#reg-window input[type="text"],input[type="password"]{
+	width:310px;height:16px;
+	padding:3px 5px;
+	font-size:14px;
+}
+#reg-window input[type="password"].invalid:focus{
+	background:#fdd url(img/text-fon.png) no-repeat;
+}
+#reg-window #passAgain.green {
+	background:#CFF url(img/text-fon.png) no-repeat;
+}
+#reg-window .redborder{
+	outline:none;
+	border:#F00 solid 1px;
+}
+#reg-window select{
+	padding:1px;
+	font-size:12px;
+}
+legend {
+	color:#777;
+	font-size:12px;
+	font-weight:bold;
+	padding:3px 0;
+}
+label{
+	position:relative;
+}
+label strong{
+	position:relative; top:-2px;
+}
+span.placeholder-text{
+	position:absolute; top:-2px; left:5px;
+	color:#999;
+}
+
+#reg-window #bDay{
+	width:20px;
+}
+#reg-window #bYear{
+	width:40px;
+}
+#reg-window p{
+	position:absolute;
+	top:20px; left:300px;
+	color:#999;
+}
+#reg-window .infomsg{
+	display:none;
+	position:absolute; left:-185px; top:10px;
+	width:155px;
+	border:#99c solid 1px;
+	background:#fdfdfd; color:#222;
+	padding:5px 5px 5px 10px;
+	-moz-box-shadow: 1px 1px 3px #999;
+    -webkit-box-shadow: 1px 1px 3px #999;
+    box-shadow: 1px 1px 3px #999;
+    filter: progid:DXImageTransform.Microsoft.shadow(direction=135, color=#999999, strength=2);
+	color:#333
+}
+#reg-window .infomsg div{
+	position:absolute; left:170px;
+	height:21px; width:12px;
+	background:url(img/arr-right.png) no-repeat;
+}

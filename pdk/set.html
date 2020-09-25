@@ -1,0 +1,433 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PDK set</title>
+<meta name="description" content="">
+<meta name="keywords"    content="">
+
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery.min.1.8.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
+<link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+
+<!--[if lt IE 9]> 
+   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+<![endif]-->
+<!--[if lt IE 10]>
+    <script type="text/javascript" src="js/PIE.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            if (window.PIE) {
+                $('.pie').each(function() {
+                    PIE.attach(this);
+                });
+            }
+        });
+    </script>
+    <![endif]-->
+    <!--[if IE 9]>
+    <link rel="stylesheet" href="css/style_ie9.css" type="text/css">
+    <![endif]-->
+    <!--[if IE 8]>
+    <link rel="stylesheet" href="css/style_ie8.css" type="text/css">
+<![endif]-->
+</head>
+
+<body>
+
+<header class='main-header'>
+  <div class='main-header-inner'>
+	
+			<div class='cart-wrapper right pos-rel pie'>
+				<div class='main-header-cart pos-rel pie'>
+				  <div class='cart-div'>
+							<p>
+								В корзине <span class='cart-quantity-item'>4 товара</span> <br> соимостью <span class='cart-cost'>6900,50 грн.</span>
+							</p>
+							<a href='cart.html' class='btn btn-grey90 pos-abs'>Просмотр</a>
+							<a href='checkout.html' class='btn btn-blue90 pos-abs'>Оформление</a>
+					</div>
+					<div class='bookmarks-div'>
+					    <p>Закладки..</p>
+					</div>
+				</div>
+				<div class='busket-tab pos-abs active'>Корзина</div>
+				<div class='bookmarks-tab pos-abs'>Закладки</div>
+			</div>
+			
+	  <a href='index.html'><div class='logo i-block'>ПинскДрев - искусство создавать уют!</div></a>
+	  <div class='main-header-text i-block'>
+		  <h1>Официальный дистрибьютор в Украине!</h1>
+		  <a href='text.html' class='a-recall'>Перезвонить?</a>
+			<a href='text.html' class='a-question'>Задать вопрос</a>
+			<a href='text.html' class='a-consult'>Личный консультант</a>
+		</div>
+	  <div class='main-header-fones i-block'>
+		  <span>095 123 45 99</span>
+		  <span>098 777 47 97</span>
+			<span>099 123 15 88</span>
+		</div>
+		
+	</div> 
+</header>
+
+<div class='main-nav-wrapper pos-rel'>
+  <nav class='i-block'>
+	  <ul class='main-nav pie'>
+		  <li><a href='category.html' id='catalog-link'>Каталог мебели</a><span class='arr-down'></span></li>
+			<li><a href='text.html'>Акции (3)</a></li>
+			<li><a href='text.html'>Доставка и оплата</a></li>
+		  <li><a href='text.html'>О кредите</a></li>
+			<li><a href='text.html'>Компания</a></li>
+			<li class='last'><a href='text.html'>Советы и статьи</a></li>
+		</ul>
+	</nav>
+  <form action="test.php" method="get" name='search-form' id='search-form'>
+	  <input type='text' name='search' class='input' id='search-inp' placeholder="Быстрый поиск">
+	  <button type="submit" class='btn pos-abs' id='search-submit'></button>
+  </form>
+ <div class='main-nav-catalog i-block pos-abs pie'>
+   <div class='main-nav-cell'>
+	   <h1>Мягкая мебель</h1>
+	   <ul>
+		   <li><a href='set.html' class='active'>Наборы мягкой мебели</a><sup>(9)</sup></li>
+		   <li><a href='category-set.html'>Кожаные диваны</a><sup>(5)</sup></li>
+			 <li><a href='category-set.html'>Угловые диваны</a><sup>(3)</sup></li>
+			 <li><a href='category-set.html'>Тканевые диваны</a><sup>(2)</sup></li>
+			 <li><a href='category-set.html'>Механизмы трансформации</a><sup>(3)</sup></li>
+		 </ul>
+	 </div>
+	 <div class='main-nav-cell'>
+	   <h1>Корпусная мебель</h1>
+	   <ul>
+		   <li><a href='set.html' class='active'>Программы мебели</a><sup>(9)</sup></li>
+		   <li><a href='category.html'>Мебель для спальни</a><sup>(5)</sup></li>
+			 <li><a href='category.html'>Мебель для гостиной</a><sup>(3)</sup></li>
+			 <li><a href='category.html'>Мебель для кабинета</a><sup>(2)</sup></li>
+			 <li><a href='category.html'>Столы</a><sup>(3)</sup></li>
+			 <li><a href='category.html'>Стулья</a><sup>(2)</sup></li>
+		 </ul>
+	 </div>
+	 <div class='main-nav-cell'>
+	   <h1>Матрасы</h1>
+	   <ul>
+		   <li><a href='category.html'>Матрасы из полиуретана</a><sup>(9)</sup></li>
+		   <li><a href='category.html'>Матрасы из латекса</a><sup>(5)</sup></li>
+			 <li><a href='category.html'>Пружинные матрасы</a><sup>(3)</sup></li>
+			 <li><a href='category.html'>Реечные днища</a><sup>(2)</sup></li>
+		 </ul>
+	 </div>
+	 <div class='main-nav-cell'>
+	   <h1>Освещение</h1>
+	   <ul>
+		   <li><a href='category.html'>Настольные лампы</a><sup>(9)</sup></li>
+		   <li><a href='category.html'>Потолочное освещение</a><sup>(5)</sup></li>
+			 <li><a href='category.html'>Абажуры и основания</a><sup>(3)</sup></li>
+			 <li><a href='category.html'>Торшеры</a><sup>(2)</sup></li>
+		 </ul>
+	 </div>
+	 
+ </div>
+</div>   
+
+<div class='main-content pie'>
+  <div class='bread-crumbs'>
+	  <a href='category.html'>Каталог мебели</a> &raquo;
+	  <a href='category-set.html'>Мягкая мебель</a> &raquo;
+		Как ухаживать за мебелью
+	</div>
+  
+	<section class='text-section set clearfix'>
+	  <h1>Набор мягкой мебели “Снипет”</h1>
+		
+		<div class='set-content'>
+		  <div class='set-left left'>
+			    <div class='set-img-wrap pos-rel'>
+						<img src="img/set_big_img.jpg" class='box-img-760' />
+						<a href='text.html' class='btn plus-btn'></a>
+						<a href='text.html' class='btn flag-btn'></a>
+						<a href='text.html' class='btn sound-btn'></a>
+					</div>
+				
+				  <div class='set-img-line'>
+					  <a href='' class='active'><img src="img/img2.jpg" class='set-img-140' title="" alt='' /></a>
+						<a href=''><img src="img/img1.jpg" class='set-img-140' title="" alt='' /></a>
+						<a href=''><img src="img/img2.jpg" class='set-img-140' title="" alt='' /></a>
+						<a href=''><img src="img/img1.jpg" class='set-img-140' title="" alt='' /></a>
+						<a href='' class='last'><img src="img/set_img.jpg" class='set-img-140' title="" alt='' /></a>
+					</div>
+					
+					<div class='cc-top-right'>
+							<div class='set-price-box clearfix'>
+								<div class='set-price-eco left clearfix'>
+									<p class='left'>
+									Экономия<br><em>при покупке набора</em>
+									</p>
+									<p class='right'>
+									 &mdash; 15% !
+									</p>
+								</div>
+								<div class='set-price right pos-rel clearfix'>
+									<em class='old-price'>5678,21 грн.</em>
+									<em class='cur-price'>5678,21 грн.</em>
+									<a href='checkout.html' class='btn buy-btn-190 right'>Купить набор</a>
+								</div>
+							</div>
+							
+							<div class='set-credit-box clearfix'>
+								<div class='set-credit right'>
+									<div class='cc-credits'>
+										В <a href='text.html'>кредит</a> на&nbsp;
+										<div class='counter counter-credit'>
+											 <input type='text' class='count-inp' value="10" >
+											 <div class='counter-arr-up'></div>
+											 <div class='counter-arr-down'></div>
+										</div>мес.
+										<div class='cc-credit-price'>
+											<em>578,23</em>грн./мес.
+										</div>
+									</div>
+								</div>
+								<div class='set-bookmark right'>
+									<h5>В мои закладки</h5>
+									<p>Добавляет товар в <a href='text.html'>ваши закладки</a>,<br> предоставляя вам быстрый доступ.</p>
+								</div>
+								<div class='set-act'>
+									<span class='cc-new'>Новинка</span>
+									<span class='cc-sale'>Акция</span>
+								</div>
+							</div>
+				  </div><!--cc-top-right-->
+					
+					
+					<div class='set-desript'>
+					  <h4>Описание набора</h4>
+					  <p>
+						Резание древесины выполняется различными методами: пилением, фрезерованием, строганием, сверлением, долблением, точением, лущением и шлифованием. Стружка может быть либо отходом производства, либо продукцией (например, шпон при лущении и строгании, тонкая дощечка при безопилочном резании). Бесстружечное резание происходит при раскалывании (дровокольный станок либо дровоколы), разрезании шпона (ножницы), вырезании штампами (шпонопочиночные станки), дроблении (дробильные и рубительные станки). Ленточная установка предназначена для продольной распиловки круглого леса на доску, шпалу, брус, шпон.
+						</p>
+					</div>
+					
+					<h4>Товары набора мягкой мебели “Снипет”</h4>
+				  <div class='set-products'>
+						<div class='product-box left'>
+							<h3>Название товара “Снипет”</h3>
+							<div class='box-img-wrap'>
+								<img src="img/img1.jpg" class='box-img-355' alt=''/>
+								<a href='text.html' class='btn plus-btn'></a>
+								<a href='text.html' class='btn flag-btn'></a>
+								<a href='text.html' class='btn sound-btn'></a>
+							</div>
+							<div class='box-price'>
+								<span class='box-price-span'>5678,22 грн.</span>
+								<a href='checkout.html' class='btn buy-btn'>Купить</a>
+							</div>
+							<div class='box-info'>
+								<span class='box-info-span-is'>Товар в наличии</span>
+								<a href='item.html' class='btn more-btn'>Подробнее &raquo;</a>
+							</div>
+						</div>
+					  
+						<div class='product-box right'>
+							<h3>Название товара “Снипет”</h3>
+							<div class='box-img-wrap'>
+								<img src="img/set_img.jpg" class='box-img-355' alt=''/>
+								<a href='text.html' class='btn plus-btn'></a>
+								<a href='text.html' class='btn flag-btn'></a>
+								<a href='text.html' class='btn sound-btn'></a>
+							</div>
+							<div class='box-price'>
+								<span class='box-price-span'>5678,22 грн.</span>
+								<a href='checkout.html' class='btn buy-btn'>Купить</a>
+							</div>
+							<div class='box-info'>
+								<span class='box-info-span-is'>Товар в наличии</span>
+								<a href='item.html' class='btn more-btn'>Подробнее &raquo;</a>
+							</div>
+						</div>
+						
+						<div class='product-box left'>
+							<h3>Название товара “Снипет”</h3>
+							<div class='box-img-wrap'>
+								<img src="img/img1.jpg" class='box-img-355' />
+								<a href='text.html' class='btn plus-btn'></a>
+								<a href='text.html' class='btn flag-btn'></a>
+								<a href='text.html' class='btn sound-btn'></a>
+							</div>
+							<div class='box-price'>
+								<span class='box-price-span'>5678,22 грн.</span>
+								<a href='checkout.html' class='btn buy-btn'>Купить</a>
+							</div>
+							<div class='box-info'>
+								<span class='box-info-span-is'>Товар в наличии</span>
+								<a href='item.html' class='btn more-btn'>Подробнее &raquo;</a>
+							</div>
+						</div>
+					</div> 
+					
+			</div>
+		
+		  <div class='set-right right'>
+			  <div class='set-free-deliv'>
+				  <h2>Бесплатная доставка</h2>
+					<p class='sr-text'>
+					  По всей территории мира.<br> Круглосуточно и в день заказа.
+					</p>
+					<p class='sr-link'>
+					  <a href='text.html' class=''>Сертификат<br>будильника</a>
+					</p>
+				</div>
+				<div class='set-garante'>
+				  <h2>Гарантия 3 года</h2>
+					<p class='sr-text'>
+					  Мы гарантируем,<br> все будет хорошо. 
+					</p>
+					<p class='sr-link'>
+					  <a href='text.html' class=''>Сертификат<br>качества</a>
+					</p>
+				</div>
+				<div class='set-instock'>
+				  <h2>Наличие набора</h2>
+					<p class='sr-text'>
+					  Посмотреть можно в<br> салоне <a href='text.html'>номер1</a>
+					</p>
+				</div>
+			</div>
+		
+		</div>
+		
+		
+	</section>	
+
+  <section class='about-section'>
+	  <h1>О магазине</h1>
+		<p>
+		 Резание древесины выполняется различными методами: пилением, фрезерованием, строганием, сверлением, долблением, точением, лущением и шлифованием. Стружка может быть либо отходом производства, либо продукцией (например, шпон при лущении и строгании, тонкая дощечка при безопилочном резании). Бесстружечное резание происходит при раскалывании (дровокольный станок либо дровоколы), разрезании шпона (ножницы), вырезании штампами (шпонопочиночные станки), дроблении (дробильные и рубительные станки). Ленточная установка предназначена для продольной распиловки круглого леса на доску, шпалу, брус, шпон. Они делятся на два больших класса. Лесопильные рамы общего назначения. Производятся для установки в специальных лесопильных цехах. Такие рамы оборудованы четырёхвальцовым механизмом подачи. Лесопильные установки делят на первый и второй род.
+		</p>
+		<p>
+		 Рамы специального назначения: горизонтальные рамы — перемещение пильной рамки происходит в горизонтальном направлении (подходят для распила брёвен ценных пород и для выпиливания ванчесов в фанерном производстве); коротышевые рамы — более надёжное закрепление бревна (благодаря восьмивальцовому механизму подачи); тарные рамы — используются в производстве тарных досок (незначительное количество отходов); передвижные рамы — подходят для временных цехов (возможна транспортировка без демонтажа).
+		</p>
+	</section>
+</div>
+
+<footer class='main-footer pie'>
+   <section class='mf-left-section i-block'>
+	   <h1>Оптовым клиентам</h1>
+		 <form action='test.php' name='enter-form' id='enter-form'>
+		   <input type='email' name='email' class='enter-input' id='email-inp' placeholder="Электронная почта">
+		   <input type='password' name='pass' class='enter-input' id='password-inp' placeholder="Пароль">
+			 <button type="submit" class='btn enter-btn' id='enter-submit'>Вход в кабинет</button>
+			 <a href='text.html' class='reg-link' >Регистрация</a>
+			 <p>
+			 Ознакомтесь с условиями сотрудничества и проверьте соответствие требованиям.
+			 </p>
+			 <p class='copyright'>
+			 © Все права принадлежат ООО Пинскдрев
+			 </p>
+		 </form>
+		 <div class='contacts-div i-block'>
+		   <ul class='cont-list'>
+			   <li><a href='text.html'>Контакты склада</a></li>
+			   <li><a href='text.html'>Условия сотрудничества</a></li>
+				 <li><a href='text.html'>Принципы работы</a></li>
+				 <li><a href='text.html'>Оптовые акции</a></li>
+				 <li><a href='text.html'>Время работы</a></li>
+				 <li><a href='text.html'>Рекомендации по заказам</a></li>
+			 </ul>
+		   <address class='footer-address clearfix'>
+			   <h5>Центральный офис:</h5>
+				   <a href='text.html'><img src="img/map.jpg" class='left' alt='' title="" /></a>
+					 <div class='address-text'>
+					   <p>
+						   <span>+38 044 333 54 44</span><br>
+							 г. Киев, пр. Какой-то 66, оф. 7
+						 </p>
+					 </div>
+			 </address>
+		 </div>
+	 </section>
+	 
+	 <section class='mf-right-section i-block'>
+     <ul class='mf-catalog-ul i-block'>
+		   <li ><a href='category.html'>Мягкая мебель</a><span></span>
+
+				  <ul class='main-nav-cell' id='c1'>
+					  <li><a href='set.html' class='active'>Наборы мягкой мебели</a><sup>(9)</sup></li>
+					  <li><a href='set.html'>Кожаные диваны</a><sup>(5)</sup></li>
+						<li><a href='set.html'>Угловые диваны</a><sup>(3)</sup></li>
+						<li><a href='set.html'>Тканевые диваны</a><sup>(2)</sup></li>
+					  <li><a href='set.html'>Механизмы трансформации</a><sup>(3)</sup></li>
+					</ul>
+
+			 </li>
+			 <li ><a href='category.html'>Корпусная мебель</a><span></span>
+		     <ul class='main-nav-cell' id='c2'>
+		       <li><a href='set.html' class='active'>Программы мебели</a><sup>(9)</sup></li>
+		       <li><a href='set.html'>Мебель для спальни</a><sup>(5)</sup></li>
+			     <li><a href='set.html'>Мебель для гостиной</a><sup>(3)</sup></li>
+			     <li><a href='set.html'>Мебель для кабинета</a><sup>(2)</sup></li>
+			     <li><a href='set.html'>Столы</a><sup>(3)</sup></li>
+			     <li><a href='set.html'>Стулья</a><sup>(2)</sup></li>
+		     </ul>
+			 </li>
+			 <li ><a href='category.html'>Матрасы</a><span></span>
+			   <ul class='main-nav-cell' id='c3'>
+		       <li><a href='set.html'>Матрасы из полиуретана</a><sup>(9)</sup></li>
+		       <li><a href='set.html'>Матрасы из латекса</a><sup>(5)</sup></li>
+			     <li><a href='set.html'>Пружинные матрасы</a><sup>(3)</sup></li>
+			     <li><a href='set.html'>Реечные днища</a><sup>(2)</sup></li>
+		     </ul>
+			 </li>
+			 <li class='last'><a href='category.html'>Освещение</a><span></span>
+			   <ul class='main-nav-cell' id='c4'>
+		       <li><a href='set.html'>Настольные лампы</a><sup>(9)</sup></li>
+		       <li><a href='set.html'>Потолочное освещение</a><sup>(5)</sup></li>
+			     <li><a href='set.html'>Абажуры и основания</a><sup>(3)</sup></li>
+			     <li><a href='set.html'>Торшеры</a><sup>(2)</sup></li>
+		     </ul>
+			 </li>
+		 </ul>
+		 
+		 <div class='mf-right-3ul'>
+			 <ul class='mfr-list1 i-block'>
+			   <li ><a href='text.html'>Доставка</a></li>
+			   <li ><a href='text.html'>Оплата</a></li>
+			   <li ><a href='text.html'>Магазины</a></li>
+			   <li ><a href='text.html'>Кредит</a></li>
+				 <li ><a href='text.html'>Гарантии</a></li>
+			 </ul>
+			 
+			 <ul class='mfr-list2 i-block'>
+			   <li ><a href='text.html'>Советы</a>
+				    <ul>
+						 <li ><a href='text.html'>по уходу</a></li>
+						 <li ><a href='text.html'>по сборке</a></li>
+						 <li ><a href='text.html'>по выбору</a></li>
+						 <li ><a href='text.html'>по дизайну</a></li>
+						 <li ><a href='text.html'>остальные</a></li>
+					  </ul> 
+					</li>
+			 </ul>	 
+				 
+			 <ul class='mfr-list3 i-block'>
+			   <li ><a href='text.html'>Компания</a>
+				    <ul>
+						 <li ><a href='text.html'>История</a></li>
+						 <li ><a href='text.html'>Материалы</a></li>
+						 <li ><a href='text.html'>Производство</a></li>
+						 <li ><a href='text.html'>Качество</a></li>
+						 <li ><a href='text.html'>Остальные 9</a></li>
+					  </ul> 
+					</li>
+			 </ul>
+		 </div>
+		 <div class='web-point'>
+		   <a href='http://webpoint.net.ua' target="_blank">Разработка и продвижение — WebPoint</a>
+		 </div>
+	 </section>
+</footer>
+
+<script>
+</script>
+</body>
+</html>

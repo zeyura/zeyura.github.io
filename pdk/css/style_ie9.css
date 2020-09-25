@@ -1,0 +1,10 @@
+
+#search-inp{ padding:8px 40px 4px 10px; height:19px;}
+.enter-input { padding:6px 10px 4px;}
+.checkout-inp{ padding:6px 10px 4px;}
+ 
+.cuselText { padding-top:8px;}
+.cusel[class~='h-24'] .cuselText {padding-top:6px ;}
+
+.item-credit .count-inp { padding:7px 27px 3px 10px;}
+.item-credit .cc-credit-price { position:relative; top:7px;}
