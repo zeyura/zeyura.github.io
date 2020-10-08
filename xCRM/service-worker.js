@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.fa2aefbb7db8aaa3ef7c5d86a78ec0ac.js"
+  "/xCRM/precache-manifest.fa2aefbb7db8aaa3ef7c5d86a78ec0ac.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "crmsys"});
